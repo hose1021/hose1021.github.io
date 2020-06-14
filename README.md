@@ -1,1 +1,1 @@
-https://hose1021.github.io/portfolio/
+https://hose1021.github.io/
