@@ -12,7 +12,6 @@
     "concurrently": "^6.3.0",
     "cross-env": "^7.0.0",
     "cssnano": "^5.0.8",
-    "live-server": "^1.2.1",
     "postcss-cli": "^9.0.1",
     "postcss-import": "^14.0.2",
     "tailwindcss": "^2.2.19"
