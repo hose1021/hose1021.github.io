@@ -1,0 +1,166 @@
+{
+  "basics": {
+    "name": "Mikail Huseynov",
+    "label": "Software Engineer",
+    "initials": ["M", "H"],
+    "location": "Azerbaijan, Baku",
+    "email": "hose1021@gmail.com",
+    "phone": "+994 55 426-62-89",
+    "urls": [
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/hose1021/" },
+      { "label": "GitHub", "url": "https://github.com/hose1021" },
+      { "label": "@hose1021", "url": null }
+    ]
+  },
+  "summary": "Senior Full-Stack Engineer with 8+ years of experience building scalable web platforms, fintech systems, SaaS products, and high-load applications using PHP/Laravel, Node.js, and modern React-based frameworks. Strong background in backend architecture, REST API development, microservices, distributed systems, and DevOps workflows. Experienced in designing and delivering production-grade solutions from architecture to deployment in international and distributed teams.",
+  "experience": [
+    {
+      "company": "Dukascopy Bank SA",
+      "location": "Switzerland",
+      "url": "https://www.linkedin.com/company/dukascopy-bank-sa/",
+      "position": "Senior Software Engineer",
+      "startDate": "Aug 2023",
+      "endDate": "Jan 2026",
+      "highlights": [
+        "Designed and developed scalable backend services using PHP and Laravel in a fintech environment",
+        "Built and maintained high-load REST APIs for internal banking systems and client-facing applications",
+        "Optimized backend performance and database interactions for high-load production environments",
+        "Worked with Docker, Kubernetes, and AWS-based infrastructure in cloud environments",
+        "Contributed to AI-related internal tooling and automation workflows"
+      ],
+      "stack": ["PHP", "Laravel", "MySQL", "Docker", "Kubernetes", "AWS"]
+    },
+    {
+      "company": "Seopa Ltd",
+      "location": "England",
+      "url": "https://www.linkedin.com/company/seopa-ltd/",
+      "position": "Senior Software Engineer",
+      "startDate": "Jan 2020",
+      "endDate": "Mar 2023",
+      "highlights": [
+        "Developed scalable backend services and microservice-based applications using PHP, Laravel, Node.js, and TypeScript",
+        "Built REST APIs supporting high-load web platforms and distributed services",
+        "Optimized database queries and application performance in production systems",
+        "Worked with Docker and Kubernetes for scalable containerized infrastructure",
+        "Participated in frontend development using React and internal platform tooling"
+      ],
+      "stack": [
+        "PHP",
+        "Laravel",
+        "Node.js",
+        "TypeScript",
+        "React",
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "company": "BestComp Group",
+      "location": "Azerbaijan",
+      "url": null,
+      "position": "Software Developer",
+      "startDate": "Mar 2018",
+      "endDate": "Dec 2020",
+      "highlights": [
+        "Developed backend systems and business applications using PHP and Laravel",
+        "Built REST APIs and internal automation services for business workflows",
+        "Worked with Docker-based development and deployment environments",
+        "Collaborated with frontend developers on API integrations and feature delivery"
+      ],
+      "stack": ["PHP", "Laravel", "MySQL", "Docker"]
+    },
+    {
+      "company": "Bitep",
+      "location": "Azerbaijan",
+      "url": null,
+      "position": "Software Developer",
+      "startDate": "Feb 2017",
+      "endDate": "Mar 2018",
+      "highlights": [
+        "Developed and maintained web applications using PHP and Laravel",
+        "Implemented backend business logic and internal platform functionality",
+        "Worked with Docker-based development environments and deployment workflows",
+        "Contributed to improving code quality and application stability"
+      ],
+      "stack": ["PHP", "Laravel", "MySQL", "Docker"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "EImtahan.az",
+      "url": null,
+      "startDate": "Jun 2024",
+      "endDate": "Nov 2024",
+      "highlights": [
+        "Developed and maintained an educational SaaS platform for schools and educational centers",
+        "Built backend services and APIs using PHP and Laravel",
+        "Developed frontend functionality using Next.js, React, TypeScript, Tailwind CSS",
+        "Worked on AI-powered question generation and platform automation features"
+      ],
+      "stack": ["PHP", "Laravel", "Next.js", "React", "TypeScript"]
+    },
+    {
+      "name": "Hire.az",
+      "url": null,
+      "startDate": "May 2019",
+      "endDate": "Jun 2022",
+      "highlights": [
+        "Developed and maintained functionality for a scalable recruitment platform",
+        "Built backend services and REST APIs using PHP and Laravel",
+        "Developed frontend functionality using Next.js, React, and TypeScript",
+        "Managed Docker-based infrastructure, Vercel deployments, and CI/CD workflows"
+      ],
+      "stack": ["PHP", "Laravel", "Next.js", "React", "TypeScript", "Docker"]
+    }
+  ],
+  "skills": [
+    "PHP",
+    "Laravel",
+    "Node.js",
+    "REST API",
+    "Microservices",
+    "Swagger/OpenAPI",
+    "React",
+    "Next.js",
+    "Vue.js",
+    "Nuxt.js",
+    "TypeScript",
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "CI/CD",
+    "PostgreSQL",
+    "MySQL",
+    "MongoDB",
+    "PHPStan",
+    "PHPUnit",
+    "Redis",
+    "Kafka",
+    "AI/LLM Tooling",
+    "Performance Optimization"
+  ],
+  "certificates": [
+    "Certificate for participation in Azerbaijan Republic tournament of programing",
+    "Certificate for Active participation in CET Project"
+  ],
+  "education": [
+    {
+      "institution": "Baku State University",
+      "startDate": "2019",
+      "endDate": "2021",
+      "degree": "Bachelor's Degree in Mathematics and Computer Science"
+    },
+    {
+      "institution": "Lomonosov Moscow State University (MSU)",
+      "startDate": "2013",
+      "endDate": "2019",
+      "degree": "Mathematics and Computer Science"
+    }
+  ],
+  "languages": [
+    { "language": "Russian", "level": "Native" },
+    { "language": "English", "level": "B1" },
+    { "language": "Azerbaijani", "level": "B1" },
+    { "language": "Turkish", "level": "B2" }
+  ]
+}

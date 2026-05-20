@@ -1,19 +1,17 @@
 {
   "name": "hose1021.github.com",
-  "version": "1.0.0",
-  "author": "Hose1021 <hose1021@gmail.com.com>",
+  "version": "2.0.0",
+  "author": "Mikail Huseynov <hose1021@gmail.com>",
+  "private": true,
   "scripts": {
-    "serve": "concurrently \"postcss ./tailwind.css -o docs/build.css --watch\"  \"live-server ./docs \"",
-    "build": "cross-env NODE_ENV=build postcss ./tailwind.css -o ./docs/build.css"
+    "generate": "bun scripts/generate.js",
+    "serve": "concurrently \"bun x tailwindcss --input tailwind.css --output docs/build.css --watch\" \"live-server ./docs\"",
+    "build": "bun run generate && bun x tailwindcss --input tailwind.css --output docs/build.css --minify"
   },
-  "dependencies": {
-    "@fullhuman/postcss-purgecss": "^4.0.3",
-    "autoprefixer": "^10.4.0",
-    "concurrently": "^6.3.0",
-    "cross-env": "^7.0.0",
-    "cssnano": "^5.0.8",
-    "postcss-cli": "^9.0.1",
-    "postcss-import": "^14.0.2",
-    "tailwindcss": "^2.2.19"
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "concurrently": "^9.2.1",
+    "live-server": "^1.2.2",
+    "tailwindcss": "^4.3.0"
   }
 }
