@@ -13,6 +13,43 @@
     ]
   },
   "summary": "Senior Backend / Full-Stack Engineer with 8 years 3 months of commercial experience building scalable fintech, SaaS, and high-load web platforms using PHP/Laravel, Node.js, React, Next.js, and TypeScript. At Dukascopy, implemented 20+ APIs and backend services across Workflow and Payments, created infrastructure queues, and reduced API response time from 7 seconds to 2 seconds. Implemented HandlerSocket-based MySQL data access for performance-critical workloads. Strong background in backend architecture, REST APIs, microservices, distributed systems, database performance, CI/CD, Docker, Kubernetes, AWS, PHPUnit, and production support.",
+  "recommendations": [
+    {
+      "name": "Afgan Khalilov",
+      "profileUrl": "https://www.linkedin.com/in/thehovdev/",
+      "role": "Senior Fullstack Typescript Developer | Tech Lead",
+      "relationship": "Worked with Mikail in the same team",
+      "date": "May 2026"
+    },
+    {
+      "name": "Jelena Litvinenko",
+      "profileUrl": "https://www.linkedin.com/in/jelena-litvinenko-7a4425119/",
+      "role": "Project Manager at Dukascopy Bank SA",
+      "relationship": "Was Mikail's direct manager",
+      "date": "May 2025"
+    },
+    {
+      "name": "Deniss Kozlovs",
+      "profileUrl": "https://www.linkedin.com/in/denirun/",
+      "role": "Senior Developer at Dukascopy Bank (Suisse) SA",
+      "relationship": "Was Mikail's direct manager",
+      "date": "May 2024"
+    },
+    {
+      "name": "Karyna Bondarenko",
+      "profileUrl": "https://www.linkedin.com/in/karyna-bondarenko-5361b318b/",
+      "role": "PHP Software Engineer",
+      "relationship": "Worked with Mikail in the same team",
+      "date": "January 2024"
+    },
+    {
+      "name": "Vadym Zotov",
+      "profileUrl": "https://www.linkedin.com/in/vadym-zotov/",
+      "role": "Commercial Director · Co-founder at Devox Software",
+      "relationship": "Was Mikail's direct manager",
+      "date": "February 2023"
+    }
+  ],
   "experience": [
     {
       "company": "Dukascopy Bank SA",
