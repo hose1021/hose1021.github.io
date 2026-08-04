@@ -109,7 +109,7 @@ const html = `<!DOCTYPE html>
       <div class="metrics" aria-label="Career highlights">
         <div><strong>8+ yrs</strong><span>commercial experience</span></div>
         <div><strong>20+ APIs</strong><span>Workflow &amp; Payments</span></div>
-        <div><strong>7s → 2s</strong><span>API response time</span></div>
+        <div><strong>3.5x faster</strong><span>API response time</span></div>
       </div>
 
       ${section("Experience", `<div class="role-stack">${data.experience.slice(0, 2).map(roleCard).join("")}</div>`, "experience-section")}

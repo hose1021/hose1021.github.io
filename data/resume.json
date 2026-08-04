@@ -12,7 +12,7 @@
       { "label": "@hose1021", "url": null }
     ]
   },
-  "summary": "Senior Backend / Full-Stack Engineer with 8 years 3 months of commercial experience building scalable fintech, SaaS, and high-load web platforms using PHP/Laravel, Node.js, React, Next.js, and TypeScript. At Dukascopy, implemented 20+ APIs and backend services across Workflow and Payments, created infrastructure queues, and reduced API response time from 7 seconds to 2 seconds. Implemented HandlerSocket-based MySQL data access for performance-critical workloads. Strong background in backend architecture, REST APIs, microservices, distributed systems, database performance, CI/CD, Docker, Kubernetes, AWS, PHPUnit, and production support.",
+  "summary": "Senior Backend / Full-Stack Engineer with 8 years 3 months of commercial experience building scalable fintech, SaaS, and high-load web platforms using PHP/Laravel, Node.js, React, Next.js, and TypeScript. At Dukascopy, implemented 20+ APIs and backend services across Workflow and Payments, created infrastructure queues, and delivered 3.5x faster API response times. Implemented HandlerSocket-based MySQL data access for performance-critical workloads. Strong background in backend architecture, REST APIs, microservices, distributed systems, database performance, CI/CD, Docker, Kubernetes, AWS, PHPUnit, and production support.",
   "recommendations": [
     {
       "name": "Afgan Khalilov",
@@ -63,7 +63,7 @@
         "Implemented 20+ APIs and backend services across the Workflow and Payments projects",
         "Designed and integrated scalable REST APIs for internal banking systems and client-facing applications",
         "Created queues for the Dukascopy infrastructure to support asynchronous processing",
-        "Reduced API response time from 7 seconds to 2 seconds across Workflow and Payments projects",
+        "Delivered 3.5x faster API response times across Workflow and Payments projects",
         "Implemented HandlerSocket-based MySQL data access for high-volume and performance-critical workloads",
         "Improved reliability through PHPUnit automated testing, CI/CD workflows, debugging, and production support",
         "Worked with Docker, Kubernetes, and AWS-based infrastructure in distributed cloud environments",
