@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Mikail Huseynov",
-    "label": "Software Engineer",
+    "label": "Senior Backend / Full-Stack Engineer",
     "initials": ["M", "H"],
     "location": "Azerbaijan, Baku",
     "email": "hose1021@gmail.com",
@@ -12,7 +12,7 @@
       { "label": "@hose1021", "url": null }
     ]
   },
-  "summary": "Senior Full-Stack Engineer with 8+ years of experience building scalable web platforms, fintech systems, SaaS products, and high-load applications using PHP/Laravel, Node.js, and modern React-based frameworks. Strong background in backend architecture, REST API development, microservices, distributed systems, and DevOps workflows. Experienced in designing and delivering production-grade solutions from architecture to deployment in international and distributed teams.",
+  "summary": "Senior Backend / Full-Stack Engineer with 8 years 3 months of commercial experience building scalable fintech, SaaS, and high-load web platforms using PHP/Laravel, Node.js, React, Next.js, and TypeScript. At Dukascopy, implemented 20+ APIs and backend services across Workflow and Payments, created infrastructure queues, and reduced API response time from 7 seconds to 2 seconds. Implemented HandlerSocket-based MySQL data access for performance-critical workloads. Strong background in backend architecture, REST APIs, microservices, distributed systems, database performance, CI/CD, Docker, Kubernetes, AWS, PHPUnit, and production support.",
   "experience": [
     {
       "company": "Dukascopy Bank SA",
@@ -22,11 +22,15 @@
       "startDate": "Aug 2023",
       "endDate": "Jan 2026",
       "highlights": [
-        "Designed and developed scalable backend services using PHP and Laravel in a fintech environment",
-        "Built and maintained high-load REST APIs for internal banking systems and client-facing applications",
-        "Optimized backend performance and database interactions for high-load production environments",
-        "Worked with Docker, Kubernetes, and AWS-based infrastructure in cloud environments",
-        "Contributed to AI-related internal tooling and automation workflows"
+        "Developed and maintained backend services for fintech products using PHP, Laravel, and MySQL",
+        "Implemented 20+ APIs and backend services across the Workflow and Payments projects",
+        "Designed and integrated scalable REST APIs for internal banking systems and client-facing applications",
+        "Created queues for the Dukascopy infrastructure to support asynchronous processing",
+        "Reduced API response time from 7 seconds to 2 seconds across Workflow and Payments projects",
+        "Implemented HandlerSocket-based MySQL data access for high-volume and performance-critical workloads",
+        "Improved reliability through PHPUnit automated testing, CI/CD workflows, debugging, and production support",
+        "Worked with Docker, Kubernetes, and AWS-based infrastructure in distributed cloud environments",
+        "Participated in microservice architecture decisions, code reviews, and the full software delivery lifecycle"
       ],
       "stack": ["PHP", "Laravel", "MySQL", "Docker", "Kubernetes", "AWS"]
     },
@@ -38,11 +42,14 @@
       "startDate": "Jan 2020",
       "endDate": "Mar 2023",
       "highlights": [
-        "Developed scalable backend services and microservice-based applications using PHP, Laravel, Node.js, and TypeScript",
-        "Built REST APIs supporting high-load web platforms and distributed services",
-        "Optimized database queries and application performance in production systems",
-        "Worked with Docker and Kubernetes for scalable containerized infrastructure",
-        "Participated in frontend development using React and internal platform tooling"
+        "Developed and maintained scalable, high-load backend services using PHP and Laravel",
+        "Designed and integrated REST APIs and microservice-based solutions using PHP, Node.js, and TypeScript",
+        "Worked with MongoDB and optimized database interactions and application performance in distributed systems",
+        "Integrated backend APIs with React and JavaScript frontend features and internal platform tooling",
+        "Managed Docker and Kubernetes environments and supported CI/CD delivery workflows",
+        "Participated in testing, debugging, code reviews, Agile/Scrum collaboration, and the full software development lifecycle",
+        "Contributed to backend architecture decisions and delivery of production-ready features",
+        "Improved service reliability through monitoring, troubleshooting, and performance optimization"
       ],
       "stack": [
         "PHP",
@@ -62,10 +69,12 @@
       "startDate": "Mar 2018",
       "endDate": "Dec 2020",
       "highlights": [
-        "Developed backend systems and business applications using PHP and Laravel",
-        "Built REST APIs and internal automation services for business workflows",
+        "Developed and maintained backend applications using PHP and Laravel for internal and client-facing systems",
+        "Built and integrated REST APIs and automation services for business workflows",
         "Worked with Docker-based development and deployment environments",
-        "Collaborated with frontend developers on API integrations and feature delivery"
+        "Participated in testing, debugging, refactoring, and production issue resolution",
+        "Collaborated with frontend developers using JavaScript for API integration and feature delivery",
+        "Improved code quality, maintainability, stability, and application performance"
       ],
       "stack": ["PHP", "Laravel", "MySQL", "Docker"]
     },
@@ -78,9 +87,11 @@
       "endDate": "Mar 2018",
       "highlights": [
         "Developed and maintained web applications using PHP and Laravel",
-        "Implemented backend business logic and internal platform functionality",
+        "Implemented backend business logic, REST API integrations, and internal platform functionality",
+        "Participated in testing, debugging, maintenance, and optimization of existing systems",
         "Worked with Docker-based development environments and deployment workflows",
-        "Contributed to improving code quality and application stability"
+        "Collaborated on frontend integrations using JavaScript",
+        "Contributed to code quality, application stability, maintainability, and development workflow improvements"
       ],
       "stack": ["PHP", "Laravel", "MySQL", "Docker"]
     }
@@ -136,8 +147,12 @@
     "PHPUnit",
     "Redis",
     "Kafka",
+    "Queues",
+    "HandlerSocket",
     "AI/LLM Tooling",
-    "Performance Optimization"
+    "Performance Optimization",
+    "Workflow",
+    "Payments"
   ],
   "certificates": [
     "Certificate for participation in Azerbaijan Republic tournament of programing",
@@ -159,8 +174,8 @@
   ],
   "languages": [
     { "language": "Russian", "level": "Native" },
-    { "language": "English", "level": "B1" },
-    { "language": "Azerbaijani", "level": "B1" },
-    { "language": "Turkish", "level": "B2" }
+    { "language": "English", "level": "B2" },
+    { "language": "Azerbaijani", "level": "B2" },
+    { "language": "Turkish", "level": "C2" }
   ]
 }

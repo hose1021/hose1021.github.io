@@ -48,8 +48,8 @@ const html = `<!DOCTYPE html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Senior Software Engineer">
-    <meta name="keywords" content="resume,cv,${h(data.basics.name)}">
+    <meta name="description" content="${h(data.basics.label)} with 8 years 3 months of experience in PHP, Laravel, Node.js, React, Next.js, TypeScript, REST APIs, microservices, and fintech systems.">
+    <meta name="keywords" content="resume,cv,${h(data.basics.name)},PHP,Laravel,Node.js,React,Next.js,TypeScript,REST API,microservices,fintech">
     <meta name="author" content="${h(data.basics.name)}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
