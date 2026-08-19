@@ -32,7 +32,8 @@ function roleCard(job) {
         <p class="role-title">${h(job.position)}</p>
       </div>
       <p class="role-date">${h(job.startDate)} – ${h(job.endDate)}</p>
-    </header>
+    </header>${job.description ? `
+    <p class="company-description">${h(job.description)}</p>` : ""}
     <ul class="bullet-list">${job.highlights.map(bullet).join("")}</ul>
     <ul class="tag-list">${job.stack.map(pill).join("")}</ul>
   </article>`;
@@ -49,15 +50,21 @@ function projectCard(project) {
   </article>`;
 }
 
+function skillGroup(group) {
+  return `<div class="skill-group"><h3>${h(group.name)}</h3><p>${h(group.items)}</p></div>`;
+}
+
 function recommendationCard(item) {
   const author = item.profileUrl ? externalLink(item.profileUrl, item.name) : h(item.name);
-  return `<article class="recommendation-card">
-    <header>
-      <h3>${author}</h3>
-      <p>${h(item.role)}</p>
-      <span>${h(item.relationship)} · ${h(item.date)}</span>
+  return `<article class="resume-role recommendation-entry">
+    <header class="role-header">
+      <div>
+        <h3>${author}</h3>
+        <p class="role-title">${h(item.role)}</p>
+      </div>
+      <p class="role-date">${h(item.date)}</p>
     </header>
-    <a class="recommendation-link" href="https://www.linkedin.com/in/hose1021/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noreferrer">View on LinkedIn ↗</a>
+    <p class="company-description">${h(item.relationship)}</p>
   </article>`;
 }
 
@@ -77,7 +84,7 @@ const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="${h(data.basics.label)} with 8 years 3 months of experience in PHP, Laravel, Node.js, React, Next.js, TypeScript, REST APIs, microservices, and fintech systems.">
+  <meta name="description" content="${h(data.basics.label)} with 8+ years of experience building high-load fintech and SaaS platforms.">
   <meta name="keywords" content="resume,cv,${h(data.basics.name)},PHP,Laravel,Node.js,React,Next.js,TypeScript,REST API,microservices,fintech">
   <meta name="author" content="${h(data.basics.name)}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,7 +116,7 @@ const html = `<!DOCTYPE html>
       <div class="metrics" aria-label="Career highlights">
         <div><strong>8+ yrs</strong><span>commercial experience</span></div>
         <div><strong>20+ APIs</strong><span>Workflow &amp; Payments</span></div>
-        <div><strong>3.5x faster</strong><span>API response time</span></div>
+        <div><strong>3x faster</strong><span>critical API response time</span></div>
       </div>
 
       ${section("Experience", `<div class="role-stack">${data.experience.slice(0, 2).map(roleCard).join("")}</div>`, "experience-section")}
@@ -121,26 +128,17 @@ const html = `<!DOCTYPE html>
       ${section("Selected Projects", `<div class="project-grid">${data.projects.map(projectCard).join("")}</div>`, "projects-section")}
 
       <div class="details-grid">
-        ${section("Core Skills", `<ul class="tag-list skill-list">${data.skills.map(pill).join("")}</ul>`, "skills-section")}
+        ${section("Skills", `<div class="skill-groups">${data.skillGroups.map(skillGroup).join("")}</div>`, "skills-section")}
         <div class="side-details">
           ${section("Languages", `<ul class="plain-list">${data.languages.map(language => `<li><strong>${h(language.language)}</strong><span>${h(language.level)}</span></li>`).join("")}</ul>`)}
           ${section("Education", `<div class="education-list">${data.education.map(item => `<div><h3>${h(item.institution)}</h3><p>${h(item.degree)}</p><span>${h(item.startDate)} – ${h(item.endDate)}</span></div>`).join("")}</div>`)}
         </div>
       </div>
 
-      ${section("Courses & Certificates", `<ul class="bullet-list certificate-list">${data.certificates.map(bullet).join("")}</ul>`, "certificates-section")}
-      <footer class="resume-footer">${h(data.basics.name)} · ${h(data.basics.email)} · ${h(data.basics.location)}</footer>
     </div>
 
-    <div class="resume-page recommendations-page">
-      <header class="recommendations-intro">
-        <p class="eyebrow">PROFESSIONAL REFERENCES</p>
-        <h1>Recommendations</h1>
-        <p>Selected recommendations from colleagues and managers on LinkedIn.</p>
-        <a class="resume-link" href="https://www.linkedin.com/in/hose1021/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noreferrer">View recommendations on LinkedIn ↗</a>
-      </header>
-      <div class="recommendations-list">${data.recommendations.map(recommendationCard).join("")}</div>
-      <footer class="resume-footer">${h(data.basics.name)} · Professional recommendations</footer>
+    <div class="resume-page second-page recommendations-page">
+      ${section("Recommendations", `<p class="summary-text recommendations-summary">Selected recommendations from colleagues and managers. ${externalLink("https://www.linkedin.com/in/hose1021/details/recommendations/?detailScreenTabIndex=0", "View all on LinkedIn")}</p><div class="role-stack recommendations-list">${data.recommendations.map(recommendationCard).join("")}</div>`, "recommendations-section")}
     </div>
   </main>
 </body>

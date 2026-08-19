@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "generate": "bun scripts/generate.js",
-    "serve": "concurrently \"bun x tailwindcss --input tailwind.css --output docs/build.css --watch\" \"live-server ./docs\"",
-    "build": "bun run generate && bun x tailwindcss --input tailwind.css --output docs/build.css --minify"
+    "serve": "concurrently \"bun x @tailwindcss/cli --input tailwind.css --output docs/build.css --watch\" \"live-server ./docs\"",
+    "build": "bun run generate && bun x @tailwindcss/cli --input tailwind.css --output docs/build.css --minify"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.0",
