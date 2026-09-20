@@ -11,7 +11,8 @@
 - [x] Design system: oklch zinc tokens, dark/light theme, 768px column, full-bleed screen lines, stripe dividers, hairline panels
 - [x] Profile header (name, rotating taglines) and eight content panels: About, Overview, Experience, Professional Development, Projects, Stack, Recommendations, Education, Languages
 - [x] Interactions: theme toggle with the `D` hotkey, nav scroll-spy, hover copy buttons, rotating taglines
-- [x] Two local fonts (Geist Sans, Geist Mono) and a 15-icon lucide subset in `data/icons.json`
+- [x] Local fonts: Inter (latin + latin-ext subsets) for prose, Geist Mono for meta, plus a 15-icon lucide subset in `data/icons.json`
+- [x] Removed on request: the FiraGO asset folder, the unused Geist Sans file, and the untracked `Mikail_Huseynov_CV.pdf`
 - [x] Content refreshed from `Mikail_Huseynov_CV.pdf`: summary, Dukascopy bullets (PCI DSS, on-call, mentoring), condensed project bullets, stack additions (Go in progress, PCI DSS, Payment Gateways), education reordered, Professional Development panel added
 - [x] Removed on request: the decorative mark block, the handwritten greeting and note, the `Fig. 1.` caption, the local-time row, the Highlights panel, the avatar roundel and the five footer info rows
 - [x] Dead code pruned with them: Caveat, the `ink` filter, `dot-grid`, `link-underline`, `screen-dashed-line-*`, `screen-line-*-none`, `extend-touch-target`, the `retina` variant, the `clock` icon, `metrics`
@@ -29,8 +30,6 @@
 
 ## Blockers / Risks
 
-- [ ] `docs/fonts/original/` still holds 1.2 MB of FiraGO source fonts that no CSS references yet GitHub Pages publishes them. Delete when the old design is dropped for good.
-- [ ] `Mikail_Huseynov_CV.pdf` sits untracked in the repository root. Decide: commit, move out, or delete.
 - [ ] The sticky nav header and the three hero taglines were kept when the top decoration was removed. Drop them if that was the intent.
 - [ ] Attribution: the CSS utilities and token names in `tailwind.css` derive from an MIT-licensed design system. MIT asks that the upstream copyright notice travel with substantial copies. No `NOTICE` file exists, on the user's instruction to keep references out of the repository.
 
@@ -49,8 +48,8 @@
 - `tailwind.css` — design system
 - `scripts/generate.js` — page assembly
 - `data/resume.json` — content; `data/icons.json` — icons
-- `docs/index.html`, `docs/build.css`, `docs/fonts.css`, `docs/fonts/Geist*.woff2`, `docs/.nojekyll`
-- `docs/fira-go.css` and 55 `docs/fonts/FiraGO-*.woff2` — removed
+- `docs/index.html`, `docs/build.css`, `docs/fonts.css`, `docs/fonts/Inter-*.woff2`, `docs/fonts/GeistMono-Variable.woff2`, `docs/.nojekyll`
+- `docs/fira-go.css`, 55 `docs/fonts/FiraGO-*.woff2`, `docs/fonts/original/` and `docs/fonts/Geist-Variable.woff2` — removed
 - `init.sh`, `AGENTS.md`, `feature_list.json`, `progress.md`, `session-handoff.md`
 
 ## Evidence of Completion

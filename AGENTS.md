@@ -26,7 +26,7 @@ bun run generate   # regenerate docs/index.html from data/resume.json
 - `docs/build.css` — compiled output, committed to repo (GitHub Pages serves from `docs/`)
 - `data/resume.json` — structured resume content (`taglines`, `professionalDevelopment`), used by `scripts/generate.js` to produce `docs/index.html`
 - `data/icons.json` — inner SVG markup of the 15 lucide icons the page uses; `generate.js` wraps them in `<svg>`
-- `docs/fonts.css` + `docs/fonts/*.woff2` — Geist Sans and Geist Mono (OFL 1.1)
+- `docs/fonts.css` + `docs/fonts/*.woff2` — Inter (latin and latin-ext subsets) and Geist Mono, both OFL 1.1
 
 ## Deployment
 
@@ -39,7 +39,7 @@ This project has one design language and it is deliberate. Keep new markup in th
 - **Theme:** `class="dark"` (or `"light"`) on `<html>`, stored in `localStorage` under `theme`, otherwise the system preference. A pre-paint script in `<head>` sets it, the header button and the `D` hotkey toggle it
 - **Colours:** every colour is an oklch token in `:root` / `.dark`, exposed to Tailwind through `@theme inline` (`bg-background`, `text-muted-foreground`, `border-line`). Never write a raw colour in markup
 - **Two border tokens:** `border` for panel edges, `line` for internal dividers. `--line` is a `color-mix` of border and background, so dark mode reuses the light declaration
-- **Typography:** Geist Sans for prose, Geist Mono for every date, label, count and tag. This split is the design
+- **Typography:** Inter for prose, Geist Mono for every date, label, count and tag. This split is the design
 - **Screen lines:** `screen-line-top` / `screen-line-bottom` draw a full-bleed hairline through `:before`/`:after` at `left:-100vw; width:200vw`. Use them instead of `border-b` on sections
 - **Panels:** `.stripe-divider h-(--separator-height)` between `<section data-slot="panel">` elements; panels carry `border-x`, titles use `text-3xl font-medium tracking-tight` with a `sup` count
 - **Icons:** from `data/icons.json` via `icon()` / `iconTile()` in the generator. Add an icon by adding its inner markup to that file

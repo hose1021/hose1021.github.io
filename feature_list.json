@@ -31,12 +31,12 @@
     {
       "id": "feat-004",
       "name": "Design system overhaul",
-      "description": "Web-first redesign on branch redesign/resume-site. oklch zinc tokens with a dark/light theme, Geist Sans + Geist Mono, 768px column, full-bleed screen lines, diagonal-stripe dividers, hairline panels with counted titles, icon-tile rows, rounded-full mono tags, numbered stack rows, profile header with the name and rotating taglines. Removed on request: the decorative mark block, handwritten greeting and note, Fig. caption, local clock, Highlights panel, avatar roundel and footer info rows. Replaces the two-page A4 print layout.",
+      "description": "Web-first redesign on branch redesign/resume-site. oklch zinc tokens with a dark/light theme, Inter + Geist Mono, 768px column, full-bleed screen lines, diagonal-stripe dividers, hairline panels with counted titles, icon-tile rows, rounded-full mono tags, numbered stack rows, profile header with the name and rotating taglines. Removed on request: the decorative mark block, handwritten greeting and note, Fig. caption, local clock, Highlights panel, avatar roundel and footer info rows. Replaces the two-page A4 print layout.",
       "dependencies": [
         "feat-003"
       ],
       "status": "done",
-      "evidence": "./init.sh passes; browser check on http://localhost:8099: 8 panels, 9 stripe dividers, 86 tags, column [336,768], header 56px sticky, no overflow; no rounded-[inherit] avatar, footer dl count 0 with 3 social links; theme toggle light<->dark persisted; flip sentences, scroll-spy aria-current and 9 copy buttons respond; GeistSans + GeistMono only"
+      "evidence": "./init.sh passes; browser check on http://localhost:8099: 8 panels, 9 stripe dividers, 86 tags, column [336,768], header 56px sticky, no overflow; no rounded-[inherit] avatar, footer dl count 0 with 3 social links; theme toggle light<->dark persisted; flip sentences, scroll-spy aria-current and 9 copy buttons respond; Inter + GeistMono"
     },
     {
       "id": "feat-005",
