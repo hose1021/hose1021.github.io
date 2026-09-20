@@ -1,0 +1,18 @@
+/* Local font faces: Geist Sans and Geist Mono (OFL 1.1).
+   Served from /fonts, which maps to docs/fonts on GitHub Pages. */
+
+@font-face {
+  font-family: "GeistSans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/fonts/Geist-Variable.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "GeistMono";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(/fonts/GeistMono-Variable.woff2) format("woff2");
+}
