@@ -2,17 +2,240 @@
   "basics": {
     "name": "Mikail Huseynov",
     "label": "Senior Backend Engineer (PHP, Node.js)",
-    "initials": ["M", "H"],
+    "initials": [
+      "M",
+      "H"
+    ],
     "location": "Baku, Azerbaijan",
     "email": "hose1021@gmail.com",
     "phone": "+994 55 426 62 89",
     "urls": [
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/hose1021/" },
-      { "label": "GitHub", "url": "https://github.com/hose1021" },
-      { "label": "Telegram: @hose1021", "url": "https://t.me/hose1021" }
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/hose1021/"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/hose1021"
+      },
+      {
+        "label": "Telegram: @hose1021",
+        "url": "https://t.me/hose1021"
+      }
     ]
   },
-  "summary": "Senior Backend Engineer with 8+ years of experience building high-load fintech and SaaS platforms. Specialized in PHP/Laravel and Node.js microservices, database optimization (MySQL, HandlerSocket), and AWS/Kubernetes infrastructure. Delivered core banking APIs at Dukascopy Bank, cutting critical response times by 3x, and engineered quote aggregation services processing 10+ external providers in under 500ms.",
+  "taglines": [
+    "8+ years building high-load fintech and SaaS platforms.",
+    "20+ REST APIs delivered for workflow and payments.",
+    "Critical API response times cut by 3x."
+  ],
+  "summary": "Senior Backend Engineer with 8+ years of experience building high-load fintech and SaaS platforms. Specialized in PHP/Laravel and Node.js microservices, secure payment systems (PCI DSS), and AWS/Kubernetes infrastructure. Delivered core banking APIs at Dukascopy Bank, cutting critical response times by 3x and owning on-call production support for payment processing; engineered quote aggregation at Seopa processing 10+ external providers in under 500ms. Mentored junior engineers and led code reviews. Currently expanding into Go and AI-assisted engineering.",
+  "professionalDevelopment": {
+    "startDate": "Jan 2026",
+    "endDate": "Present",
+    "highlights": [
+      "Deepening AI-assisted engineering: LLM APIs, RAG, MCP, AI-driven development workflows.",
+      "Expanding backend stack beyond PHP into Node.js and Go (TypeScript, Go)."
+    ]
+  },
+  "experience": [
+    {
+      "company": "Dukascopy Bank SA",
+      "location": "Switzerland",
+      "url": "https://www.linkedin.com/company/dukascopy-bank-sa/",
+      "position": "Senior Software Engineer",
+      "startDate": "Aug 2023",
+      "endDate": "Jan 2026",
+      "description": "Swiss online bank providing trading services and banking solutions.",
+      "highlights": [
+        "Optimized critical payment and workflow APIs (PCI DSS-compliant), reducing average response time by over 3x (from 7s to 2s) by refactoring business logic and database queries.",
+        "Engineered and implemented a high-performance data access layer using HandlerSocket for MySQL, bypassing the SQL parser for performance-critical workloads in the core banking system.",
+        "Architected and delivered over 20 new REST APIs and backend services for Workflow and Payments platforms using PHP and Laravel.",
+        "Built and deployed asynchronous task processing using message queues, decoupling services and improving resilience for payment processing.",
+        "Owned the full lifecycle of key microservices — architecture, implementation, deployment, monitoring, and on-call production support — in Kubernetes and AWS.",
+        "Mentored junior engineers and led code reviews, raising engineering standards across the payments team."
+      ],
+      "stack": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "HandlerSocket",
+        "Message Queues",
+        "Kubernetes",
+        "AWS",
+        "PCI DSS"
+      ]
+    },
+    {
+      "company": "Seopa Ltd",
+      "location": "United Kingdom",
+      "url": "https://www.linkedin.com/company/seopa-ltd/",
+      "position": "Senior Software Engineer",
+      "startDate": "Jan 2021",
+      "endDate": "Mar 2023",
+      "description": "Parent company of UK financial comparison platforms Quotezone.co.uk and CompareNI.com.",
+      "highlights": [
+        "Led development of an insurance quote aggregation service using Node.js and TypeScript, processing requests from 10+ external providers in under 500ms.",
+        "Migrated a monolithic PHP component to a standalone microservice, reducing deployment dependencies and improving team autonomy.",
+        "Optimized MongoDB queries for the user profile service, cutting read latency by 40% and supporting a 2x increase in traffic.",
+        "Built and maintained GitLab CI pipelines for automated testing and Kubernetes deployment, reducing manual deployment time by 80%.",
+        "Designed and implemented REST APIs for a React-based customer dashboard in collaboration with the frontend team."
+      ],
+      "stack": [
+        "PHP",
+        "Node.js",
+        "TypeScript",
+        "MongoDB",
+        "React",
+        "GitLab CI",
+        "Kubernetes"
+      ]
+    },
+    {
+      "company": "BestComp Group",
+      "location": "Azerbaijan",
+      "url": null,
+      "position": "Software Developer",
+      "startDate": "Mar 2018",
+      "endDate": "Dec 2020",
+      "description": "Leading IT solutions provider and system integrator in Azerbaijan.",
+      "highlights": [
+        "Built a PHP/Laravel REST API for an internal workflow automation tool, eliminating ~10 hours of manual data entry per week for the operations team.",
+        "Refactored a legacy data import module, improving stability and reducing processing errors by 50%.",
+        "Standardized engineering onboarding by containerizing the local development environment with Docker, reducing setup time from a full day to under an hour."
+      ],
+      "stack": [
+        "PHP",
+        "Laravel",
+        "REST API",
+        "Docker"
+      ]
+    },
+    {
+      "company": "Bitep",
+      "location": "Azerbaijan",
+      "url": null,
+      "position": "Software Developer",
+      "startDate": "Feb 2017",
+      "endDate": "Mar 2018",
+      "highlights": [
+        "Developed and maintained client web applications using PHP/Laravel, including REST APIs and third-party service integrations.",
+        "Managed delivery across requirements, testing, deployment, and maintenance in a Dockerized environment."
+      ],
+      "stack": [
+        "PHP",
+        "Laravel",
+        "REST API",
+        "Docker"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "EImtahan.az · Personal Project",
+      "url": null,
+      "startDate": "Jun 2024",
+      "endDate": "Nov 2024",
+      "highlights": [
+        "Architected a scalable SaaS exam platform (PHP/Laravel, Next.js/React) supporting concurrent sessions with real-time reporting.",
+        "Integrated LLM APIs for AI-powered question generation, automating content creation for educators."
+      ],
+      "stack": [
+        "PHP",
+        "Laravel",
+        "Next.js",
+        "React",
+        "LLM APIs"
+      ]
+    },
+    {
+      "name": "hire.az · Personal Project",
+      "url": null,
+      "startDate": "May 2019",
+      "endDate": "Jun 2022",
+      "highlights": [
+        "Privacy-focused recruitment platform (PHP/Laravel, Next.js) with anonymous profiles; CI/CD on Vercel and Docker, Sentry observability."
+      ],
+      "stack": [
+        "PHP",
+        "Laravel",
+        "Next.js",
+        "Sentry",
+        "Vercel",
+        "Docker"
+      ]
+    }
+  ],
+  "skillGroups": [
+    {
+      "name": "Languages",
+      "items": "PHP 8.x, JavaScript (ES6+), TypeScript, Go (in progress), SQL, Bash/Shell"
+    },
+    {
+      "name": "Backend & APIs",
+      "items": "Laravel, Node.js, REST API, Microservices, CQRS, Event-Driven Architecture, WebSockets, JWT, PCI DSS, Payment Gateways"
+    },
+    {
+      "name": "Databases & Messaging",
+      "items": "MySQL, PostgreSQL, MongoDB, Redis, HandlerSocket, Kafka, RabbitMQ"
+    },
+    {
+      "name": "Architecture & Performance",
+      "items": "High-Load Systems, Distributed Systems, System Design, SOLID, Performance Optimization, Caching"
+    },
+    {
+      "name": "Infrastructure & Cloud",
+      "items": "Docker, Kubernetes, Nginx, AWS, Terraform, GitHub Actions, GitLab CI/CD"
+    },
+    {
+      "name": "Frontend",
+      "items": "React, Next.js, Vue.js, Nuxt.js, Angular, Tailwind CSS"
+    },
+    {
+      "name": "Testing & Quality",
+      "items": "PHPUnit, PHPStan, Unit Testing, Integration Testing, Swagger/OpenAPI"
+    },
+    {
+      "name": "Observability",
+      "items": "Sentry, Logging, Monitoring"
+    },
+    {
+      "name": "AI-Assisted Engineering",
+      "items": "OpenAI Codex, Claude, MCP, RAG, Prompt & Context Engineering, AI-Assisted Code Review"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Lomonosov Moscow State University (MSU)",
+      "startDate": "2013",
+      "endDate": "2019",
+      "degree": "Mathematics and Computer Science"
+    },
+    {
+      "institution": "Baku State University",
+      "startDate": "2019",
+      "endDate": "2021",
+      "degree": "Bachelor's Degree in Mathematics and Computer Science"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Russian",
+      "level": "Native"
+    },
+    {
+      "language": "Azerbaijani",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "Professional Working Proficiency (B2)"
+    },
+    {
+      "language": "Turkish",
+      "level": "Intermediate (B1)"
+    }
+  ],
   "recommendations": [
     {
       "name": "Afgan Khalilov",
@@ -49,153 +272,5 @@
       "relationship": "Was Mikail's direct manager",
       "date": "February 2023"
     }
-  ],
-  "experience": [
-    {
-      "company": "Dukascopy Bank SA",
-      "location": "Switzerland",
-      "url": "https://www.linkedin.com/company/dukascopy-bank-sa/",
-      "position": "Senior Software Engineer",
-      "startDate": "Aug 2023",
-      "endDate": "Jan 2026",
-      "description": "Swiss online bank providing trading services and banking solutions.",
-      "highlights": [
-        "Optimized critical payment and workflow APIs, reducing average response time by over 3x (from 7s to 2s) by refactoring business logic and database queries.",
-        "Engineered and implemented a high-performance data access layer using HandlerSocket for MySQL, bypassing the SQL parser for performance-critical workloads in the core banking system.",
-        "Architected and delivered over 20 new REST APIs and backend services for Workflow and Payments platforms using PHP and Laravel.",
-        "Built and deployed asynchronous task processing using message queues, decoupling services and improving resilience for payment processing.",
-        "Owned the full development lifecycle for key microservices, from architecture and implementation to deployment and monitoring in Kubernetes and AWS."
-      ],
-      "stack": ["PHP", "Laravel", "MySQL", "HandlerSocket", "Message Queues", "Kubernetes", "AWS"]
-    },
-    {
-      "company": "Seopa Ltd",
-      "location": "United Kingdom",
-      "url": "https://www.linkedin.com/company/seopa-ltd/",
-      "position": "Senior Software Engineer",
-      "startDate": "Jan 2021",
-      "endDate": "Mar 2023",
-      "description": "Parent company of UK financial comparison platforms Quotezone.co.uk and CompareNI.com.",
-      "highlights": [
-        "Led development of an insurance quote aggregation service using Node.js and TypeScript, processing requests from 10+ external providers in under 500ms.",
-        "Migrated a monolithic PHP component to a standalone microservice, reducing deployment dependencies and improving team autonomy.",
-        "Optimized MongoDB queries for the user profile service, cutting read latency by 40% and supporting a 2x increase in traffic.",
-        "Built and maintained GitLab CI pipelines for automated testing and Kubernetes deployment, reducing manual deployment time by 80%.",
-        "Designed and implemented REST APIs for a React-based customer dashboard in collaboration with the frontend team."
-      ],
-      "stack": ["PHP", "Node.js", "TypeScript", "MongoDB", "React", "GitLab CI", "Kubernetes"]
-    },
-    {
-      "company": "BestComp Group",
-      "location": "Azerbaijan",
-      "url": null,
-      "position": "Software Developer",
-      "startDate": "Mar 2018",
-      "endDate": "Dec 2020",
-      "description": "Leading IT solutions provider and system integrator in Azerbaijan.",
-      "highlights": [
-        "Built a PHP/Laravel REST API for an internal workflow automation tool, eliminating ~10 hours of manual data entry per week for the operations team.",
-        "Refactored a legacy data import module, improving stability and reducing processing errors by 50%.",
-        "Standardized engineering onboarding by containerizing the local development environment with Docker, reducing setup time from a full day to under an hour."
-      ],
-      "stack": ["PHP", "Laravel", "REST API", "Docker"]
-    },
-    {
-      "company": "Bitep",
-      "location": "Azerbaijan",
-      "url": null,
-      "position": "Software Developer",
-      "startDate": "Feb 2017",
-      "endDate": "Mar 2018",
-      "highlights": [
-        "Developed and maintained client web applications using PHP/Laravel, including REST APIs and third-party service integrations.",
-        "Managed delivery across requirements, testing, deployment, and maintenance in a Dockerized environment."
-      ],
-      "stack": ["PHP", "Laravel", "REST API", "Docker"]
-    }
-  ],
-  "projects": [
-    {
-      "name": "EImtahan.az · Personal Project",
-      "url": null,
-      "startDate": "Jun 2024",
-      "endDate": "Nov 2024",
-      "highlights": [
-        "Architected a scalable SaaS education platform using PHP/Laravel and Next.js/React, supporting concurrent exam sessions with real-time reporting.",
-        "Engineered a high-load exam system with concurrent sessions, real-time reporting, and role-based access.",
-        "Integrated LLM APIs for AI-powered question generation, automating content creation for educators."
-      ],
-      "stack": ["PHP", "Laravel", "Next.js", "React", "LLM APIs"]
-    },
-    {
-      "name": "hire.az · Personal Project",
-      "url": null,
-      "startDate": "May 2019",
-      "endDate": "Jun 2022",
-      "highlights": [
-        "Developed a privacy-focused recruitment platform with anonymous candidate profiles using PHP/Laravel and Next.js.",
-        "Integrated Sentry and Promptwatch for production observability and faster issue resolution.",
-        "Managed CI/CD and infrastructure on Vercel and Docker for reliable, frequent deployments."
-      ],
-      "stack": ["PHP", "Laravel", "Next.js", "Sentry", "Vercel", "Docker"]
-    }
-  ],
-  "skillGroups": [
-    {
-      "name": "Languages",
-      "items": "PHP 8.x, JavaScript (ES6+), TypeScript, SQL, Bash/Shell"
-    },
-    {
-      "name": "Backend & APIs",
-      "items": "Laravel, Node.js, REST API, Microservices, CQRS, Event-Driven Architecture, WebSockets, JWT"
-    },
-    {
-      "name": "Databases & Messaging",
-      "items": "MySQL, PostgreSQL, MongoDB, Redis, HandlerSocket, Kafka, RabbitMQ"
-    },
-    {
-      "name": "Architecture & Performance",
-      "items": "High-Load Systems, Distributed Systems, System Design, SOLID, Performance Optimization, Caching"
-    },
-    {
-      "name": "Infrastructure & Cloud",
-      "items": "Docker, Kubernetes, Nginx, AWS, Terraform, GitHub Actions, GitLab CI/CD"
-    },
-    {
-      "name": "Frontend",
-      "items": "React, Next.js, Vue.js, Nuxt.js, Angular, Tailwind CSS"
-    },
-    {
-      "name": "Testing & Quality",
-      "items": "PHPUnit, PHPStan, Unit Testing, Integration Testing, Swagger/OpenAPI"
-    },
-    {
-      "name": "Observability",
-      "items": "Sentry, Logging, Monitoring"
-    },
-    {
-      "name": "AI-Assisted Engineering",
-      "items": "OpenAI Codex, Claude, MCP, RAG, Prompt & Context Engineering, AI-Assisted Code Review"
-    }
-  ],
-  "education": [
-    {
-      "institution": "Baku State University",
-      "startDate": "2019",
-      "endDate": "2021",
-      "degree": "Bachelor's Degree in Mathematics and Computer Science"
-    },
-    {
-      "institution": "Lomonosov Moscow State University (MSU)",
-      "startDate": "2013",
-      "endDate": "2019",
-      "degree": "Coursework in Mathematics and Computer Science (transferred)"
-    }
-  ],
-  "languages": [
-    { "language": "Russian", "level": "Native" },
-    { "language": "Azerbaijani", "level": "Native" },
-    { "language": "English", "level": "Professional Working Proficiency (B2)" },
-    { "language": "Turkish", "level": "Intermediate (B1)" }
   ]
 }

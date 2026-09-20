@@ -1,0 +1,62 @@
+{
+  "features": [
+    {
+      "id": "feat-001",
+      "name": "Content pipeline parity",
+      "description": "docs/index.html is generated from data/resume.json by scripts/generate.js. ./init.sh regenerates it and fails when the committed file differs.",
+      "dependencies": [],
+      "status": "done",
+      "evidence": "./init.sh (2026-09-21): regenerate produced no git diff for docs/index.html"
+    },
+    {
+      "id": "feat-002",
+      "name": "Committed build output freshness",
+      "description": "docs/build.css is committed because GitHub Pages serves from docs/. ./init.sh rebuilds it and fails when the committed file is stale.",
+      "dependencies": [
+        "feat-001"
+      ],
+      "status": "done",
+      "evidence": "./init.sh (2026-09-21): bun run build produced no git diff for docs/build.css"
+    },
+    {
+      "id": "feat-003",
+      "name": "Local asset references resolve",
+      "description": "Every local url()/href/src in docs/build.css and docs/index.html must resolve to a file under docs/ (fonts, certificates, work samples).",
+      "dependencies": [
+        "feat-002"
+      ],
+      "status": "done",
+      "evidence": "./init.sh (2026-09-21): all local asset references resolve"
+    },
+    {
+      "id": "feat-004",
+      "name": "Design system overhaul",
+      "description": "Web-first redesign on branch redesign/resume-site. oklch zinc tokens with a dark/light theme, Inter + Geist Mono, 768px column, full-bleed screen lines, diagonal-stripe dividers, hairline panels with counted titles, icon-tile rows, rounded-full mono tags, numbered stack rows, profile header with the name and rotating taglines. Removed on request: the decorative mark block, handwritten greeting and note, Fig. caption, local clock, Highlights panel, avatar roundel and footer info rows. Replaces the two-page A4 print layout.",
+      "dependencies": [
+        "feat-003"
+      ],
+      "status": "done",
+      "evidence": "./init.sh passes; browser check on http://localhost:8099: 8 panels, 9 stripe dividers, 86 tags, column [336,768], header 56px sticky, no overflow; no rounded-[inherit] avatar, footer dl count 0 with 3 social links; theme toggle light<->dark persisted; flip sentences, scroll-spy aria-current and 9 copy buttons respond; Inter + GeistMono"
+    },
+    {
+      "id": "feat-005",
+      "name": "CV content refresh from PDF",
+      "description": "Data refresh from Mikail_Huseynov_CV.pdf: rewritten summary, PCI DSS and on-call scope in the Dukascopy bullets plus a new mentoring bullet, condensed project bullets, Go (in progress) and PCI DSS / Payment Gateways in the stack, education reordered with the MSU degree restated, and a new Professional Development panel.",
+      "dependencies": [
+        "feat-004"
+      ],
+      "status": "done",
+      "evidence": "./init.sh passes; browser check: 9 panels with development between experience and projects, Dukascopy 6 bullets, projects 2 and 1, stack pills include Go (in progress) and PCI DSS, education order MSU then BSU"
+    },
+    {
+      "id": "feat-006",
+      "name": "Next content update",
+      "description": "Standing slot for the next resume change: edit data/resume.json, run ./init.sh, commit sources together with regenerated docs/ output. Replace this entry with the concrete change when one starts.",
+      "dependencies": [
+        "feat-005"
+      ],
+      "status": "not-started",
+      "evidence": ""
+    }
+  ]
+}
