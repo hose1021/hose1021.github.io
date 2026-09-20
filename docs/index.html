@@ -2,188 +2,591 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Senior Backend Engineer (PHP, Node.js) with 8+ years of experience building high-load fintech and SaaS platforms.">
-  <meta name="keywords" content="resume,cv,Mikail Huseynov,PHP,Laravel,Node.js,React,Next.js,TypeScript,REST API,microservices,fintech">
+  <meta name="description" content="Senior Backend Engineer (PHP, Node.js). Senior Backend Engineer with 8+ years of experience building high-load fintech and SaaS platforms. Specialized in PHP/Laravel and Node.js microservices, secure payment systems (PCI DSS), and AWS/Kubernetes infrastructure. Delivered core banking APIs at Dukascopy Bank, cutting critical response times by 3x and owning on-call production support for payment processing; engineered quote aggregation at Seopa processing 10+ external providers in under 500ms. Mentored junior engineers and led code reviews. Currently expanding into Go and AI-assisted engineering.">
+  <meta name="keywords" content="resume,cv,Mikail Huseynov,PHP,Laravel,Node.js,TypeScript,REST API,microservices,fintech">
   <meta name="author" content="Mikail Huseynov">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mikail Huseynov — Resume</title>
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
+  <title>Mikail Huseynov — Senior Backend Engineer (PHP, Node.js)</title>
   <link href="build.css" rel="stylesheet">
+  <script>
+    (function () {
+      var stored = localStorage.getItem("theme");
+      var dark = stored ? stored === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.classList.add(dark ? "dark" : "light");
+      document.documentElement.style.colorScheme = dark ? "dark" : "light";
+    })();
+  </script>
 </head>
 <body>
-  <main class="resume-document">
-    <div class="resume-page">
-      <header class="resume-header">
-        <div class="identity">
-          <div class="initials" aria-hidden="true"><span>M</span><span>H</span></div>
-          <div>
-            <p class="eyebrow">SOFTWARE ENGINEERING</p>
-            <h1>Mikail Huseynov</h1>
-            <p class="headline">Senior Backend Engineer (PHP, Node.js)</p>
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:border focus:border-border focus:bg-background focus:px-3 focus:py-2 focus:text-sm">Skip to content</a>
+
+  <div class="group/layout relative isolate">
+    <header class="sticky top-0 z-50 max-w-screen overflow-x-clip bg-background px-2">
+      <div class="screen-line-top screen-line-bottom mx-auto flex h-(--header-height) items-center gap-2 border-x screen-line-bottom-border screen-line-top-border pr-2 pl-4 after:z-1 sm:gap-4 md:max-w-3xl">
+        <a href="#top" aria-label="Home">
+          <span class="flex h-6 shrink-0 items-center gap-1 font-mono text-sm tracking-tight">
+            <span class="flex size-6 items-center justify-center border border-line bg-muted text-[11px] text-muted-foreground">M</span>
+            <span class="flex size-6 items-center justify-center border border-line bg-muted text-[11px] text-muted-foreground">H</span>
+          </span>
+        </a>
+
+        <div class="flex-1"></div>
+
+        <nav class="flex items-center gap-4 max-sm:hidden" data-nav aria-label="Sections"><a class="text-sm font-medium tracking-wide text-muted-foreground transition-[color] hover:text-foreground aria-[current=page]:text-foreground" href="#experience">Experience</a><a class="text-sm font-medium tracking-wide text-muted-foreground transition-[color] hover:text-foreground aria-[current=page]:text-foreground" href="#projects">Projects</a><a class="text-sm font-medium tracking-wide text-muted-foreground transition-[color] hover:text-foreground aria-[current=page]:text-foreground" href="#stack">Stack</a><a class="text-sm font-medium tracking-wide text-muted-foreground transition-[color] hover:text-foreground aria-[current=page]:text-foreground" href="#recommendations">Recommendations</a><a class="text-sm font-medium tracking-wide text-muted-foreground transition-[color] hover:text-foreground aria-[current=page]:text-foreground" href="#education">Education</a></nav>
+
+        <div class="flex items-center">
+          <div role="separator" aria-orientation="vertical" class="mr-2 h-5 w-px shrink-0 self-center bg-border max-sm:hidden"></div>
+          <button type="button" id="theme-toggle" class="relative inline-flex size-8 cursor-pointer touch-manipulation items-center justify-center rounded-md border-none text-foreground transition-colors hover:bg-accent" aria-label="Toggle mode">
+            <span class="absolute size-12 pointer-fine:hidden" aria-hidden="true"></span>
+            <span class="hidden [html.dark_&]:block" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></svg></span>
+            <span class="hidden [html.light_&]:block" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><circle cx="12" cy="12" r="4" /> <path d="M12 2v2" /> <path d="M12 20v2" /> <path d="m4.93 4.93 1.41 1.41" /> <path d="m17.66 17.66 1.41 1.41" /> <path d="M2 12h2" /> <path d="M20 12h2" /> <path d="m6.34 17.66-1.41 1.41" /> <path d="m19.07 4.93-1.41 1.41" /></svg></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="max-w-screen overflow-x-clip px-2">
+      <div id="top" class="mx-auto md:max-w-3xl [--separator-height:--spacing(8)] **:data-[slot=panel]:scroll-mt-[calc(var(--header-height)+var(--separator-height))]">
+        <div class="screen-line-bottom border-x screen-line-bottom-border after:z-1">
+      <div class="flex -translate-x-px items-center gap-2 px-4 pt-6 pb-1">
+        <h1 class="-translate-y-px text-[2rem]/none font-medium tracking-tight">Mikail Huseynov</h1>
+      </div>
+      <div id="flip-sentences" class="relative h-12.5 overflow-hidden border-t border-line py-1 pl-4 sm:h-9">
+        <p data-flip-item class="absolute inset-y-1 left-4 flex items-center text-sm text-muted-foreground transition-[opacity,transform] duration-500 ease-out" style="opacity:1;transform:translateY(0px)">8+ years building high-load fintech and SaaS platforms.</p><p data-flip-item class="absolute inset-y-1 left-4 flex items-center text-sm text-muted-foreground transition-[opacity,transform] duration-500 ease-out" style="opacity:0;transform:translateY(8px)">20+ REST APIs delivered for workflow and payments.</p><p data-flip-item class="absolute inset-y-1 left-4 flex items-center text-sm text-muted-foreground transition-[opacity,transform] duration-500 ease-out" style="opacity:0;transform:translateY(8px)">Critical API response times cut by 3x.</p>
+      </div>
+    </div>
+        <div class="stripe-divider h-(--separator-height) w-full border-x"></div>
+        <section id="about" data-slot="panel" class="screen-line-top screen-line-bottom border-x screen-line-bottom-border">
+        <header data-slot="panel-header" class="screen-line-bottom px-4">
+          <h2 data-slot="panel-title" class="group/panel-title relative inline-block font-heading text-3xl font-medium tracking-tight text-balance">
+            <a href="#about">About</a><button type="button" class="copy-heading absolute top-1 ml-1 size-7 shrink-0 cursor-pointer rounded-md border-none text-muted-foreground opacity-0 transition-opacity group-hover/panel-title:opacity-100 focus-visible:opacity-100" data-heading-id="about" aria-label="Copy link to section"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg></button>
+          </h2>
+        </header>
+        <div data-slot="panel-body" class="p-4">
+          <div class="typeset typeset-description [&_li]:ps-0.5 [&_ul]:ps-3.5"><p class="text-[0.9375rem]/6 text-balance">Senior Backend Engineer with 8+ years of experience building high-load fintech and SaaS platforms. Specialized in PHP/Laravel and Node.js microservices, secure payment systems (PCI DSS), and AWS/Kubernetes infrastructure. Delivered core banking APIs at Dukascopy Bank, cutting critical response times by 3x and owning on-call production support for payment processing; engineered quote aggregation at Seopa processing 10+ external providers in under 500ms. Mentored junior engineers and led code reviews. Currently expanding into Go and AI-assisted engineering.</p></div>
+        </div>
+      </section>
+        <div class="stripe-divider h-(--separator-height) w-full border-x"></div>
+        <section id="overview" data-slot="panel" class="screen-line-top screen-line-bottom border-x screen-line-bottom-border screen-line-bottom-none">
+        <h2 class="sr-only">Overview</h2>
+        <div data-slot="panel-body" class="grid gap-x-4 gap-y-2.5 p-4 sm:grid-cols-2"><div class="sm:col-span-2"><div class="flex items-center gap-4 font-mono text-sm"><div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M12 12h.01" /> <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /> <path d="M22 13a18.15 18.15 0 0 1-20 0" /> <rect width="20" height="14" x="2" y="6" rx="2" /></svg></div><p class="text-balance">Most recent role <span aria-label="at">@</span> <a class="link ml-0.5 font-medium" href="#experience">Dukascopy Bank SA</a></p></div></div><div class="flex items-center gap-4 font-mono text-sm"><div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /> <circle cx="12" cy="10" r="3" /></svg></div><p class="text-balance"><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Baku%2C%20Azerbaijan" target="_blank" rel="noopener">Baku, Azerbaijan</a></p></div><div class="flex items-center gap-4 font-mono text-sm"><div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg></div><p class="text-balance"><a class="link" href="tel:+994554266289" target="_blank" rel="noopener">+994 55 426 62 89</a></p></div><div class="group flex items-center gap-4 font-mono text-sm"><div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" /> <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg></div><p class="text-balance"><a class="link" href="mailto:hose1021@gmail.com">hose1021@gmail.com</a></p><button type="button" class="copy-text -translate-x-2 cursor-pointer text-muted-foreground opacity-0 transition-opacity ease-out group-hover:opacity-100 focus-visible:opacity-100" data-copy="hose1021@gmail.com" aria-label="Copy email address"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg></button></div><div class="flex items-center gap-4 font-mono text-sm"><div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /> <rect width="4" height="12" x="2" y="9" /> <circle cx="4" cy="4" r="2" /></svg></div><p class="text-balance"><a class="link" href="https://www.linkedin.com/in/hose1021/" target="_blank" rel="noopener">LinkedIn</a></p></div><div class="flex items-center gap-4 font-mono text-sm"><div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /> <path d="M9 18c-4.51 2-5-2-7-2" /></svg></div><p class="text-balance"><a class="link" href="https://github.com/hose1021" target="_blank" rel="noopener">GitHub</a></p></div><div class="flex items-center gap-4 font-mono text-sm"><div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /> <path d="m21.854 2.147-10.94 10.939" /></svg></div><p class="text-balance"><a class="link" href="https://t.me/hose1021" target="_blank" rel="noopener">Telegram</a></p></div></div>
+        <div class="pointer-events-none absolute inset-y-0 left-1/2 -z-1 w-px -translate-x-2.25 border-r border-dashed border-line max-sm:hidden"></div>
+      </section>
+        <div class="stripe-divider h-(--separator-height) w-full border-x"></div>
+        <section id="experience" data-slot="panel" class="screen-line-top screen-line-bottom border-x screen-line-bottom-border ">
+        <header data-slot="panel-header" class="screen-line-bottom px-4">
+          <h2 data-slot="panel-title" class="group/panel-title relative inline-block font-heading text-3xl font-medium tracking-tight text-balance">
+            <a href="#experience">Experience</a><sup class="top-[-0.75em] ml-1 text-sm font-medium tracking-normal text-muted-foreground">(4)</sup><button type="button" class="copy-heading absolute top-1 ml-1 size-7 shrink-0 cursor-pointer rounded-md border-none text-muted-foreground opacity-0 transition-opacity group-hover/panel-title:opacity-100 focus-visible:opacity-100" data-heading-id="experience" aria-label="Copy link to section"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg></button>
+          </h2>
+          <div data-slot="panel-description" class="py-4 text-base text-balance text-muted-foreground">Roles held between Feb 2017 and Jan 2026. Expand a role for the full list of delivery notes and the stack used.</div>
+        </header>
+        <div data-slot="panel-body" class="p-4"><div id="experience-dukascopy-bank-sa" class="group/experience screen-line-bottom scroll-mt-14 space-y-4 py-4">
+        <div class="flex items-start gap-3 sm:items-center">
+          <div class="flex size-6 shrink-0 items-center justify-center select-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="M12 12h.01" /> <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /> <path d="M22 13a18.15 18.15 0 0 1-20 0" /> <rect width="20" height="14" x="2" y="6" rx="2" /></svg>
+          </div>
+          <div class="flex min-w-0 flex-1 flex-col gap-x-3 gap-y-1 pr-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="text-xl/6 font-medium"><a class="link" href="https://www.linkedin.com/company/dukascopy-bank-sa/" target="_blank" rel="noopener">Dukascopy Bank SA</a></h3>
+            <dl class="flex min-w-0 items-center gap-1.5 text-sm whitespace-nowrap text-muted-foreground">
+              <dt class="sr-only">Location</dt>
+              <dd class="truncate">Switzerland</dd>
+            </dl>
           </div>
         </div>
-        <div class="contact-block">
-          <span>Baku, Azerbaijan</span>
-          <a href="mailto:hose1021@gmail.com">hose1021@gmail.com</a>
-          <a href="tel:+994554266289">+994 55 426 62 89</a>
-          <div class="contact-links"><a class="resume-link" href="https://www.linkedin.com/in/hose1021/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a class="resume-link" href="https://github.com/hose1021" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a class="resume-link" href="https://t.me/hose1021" target="_blank" rel="noreferrer">Telegram: @hose1021 <span aria-hidden="true">↗</span></a></div>
+        <div class="relative space-y-4 before:absolute before:left-3 before:h-full before:w-px before:bg-border">
+          <div class="group/experience-position relative">
+            <div class="pointer-events-none absolute bottom-0 left-3 hidden size-4 bg-background group-last/experience-position:flex" aria-hidden="true">
+              <span class="size-full -translate-y-2.25 rounded-bl-sm border-b border-l"></span>
+            </div>
+            <div>
+              <div class="relative z-1 mb-1 flex items-start gap-3 text-base">
+                <div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="m18 16 4-4-4-4" /> <path d="m6 8-4 4 4 4" /> <path d="m14.5 4-5 16" /></svg></div>
+                <h4 class="flex-1 font-medium text-balance">Senior Software Engineer</h4>
+              </div>
+              <dl class="flex flex-wrap items-center gap-2 pl-9 text-sm text-muted-foreground">
+                <div><dt class="sr-only">Employment period</dt><dd class="flex items-center gap-0.5 tabular-nums"><span>Aug 2023</span><span class="font-mono">—</span><span>Jan 2026</span></dd></div>
+                <div role="separator" aria-hidden="true" class="h-4 w-px shrink-0 self-center bg-border"></div>
+                <div><dt class="sr-only">Duration</dt><dd class="tabular-nums">2 yrs 6 mos</dd></div>
+              </dl>
+            </div>
+            <div class="typeset typeset-description pt-3 pb-1 pl-9">
+              <ul><li>Optimized critical payment and workflow APIs (PCI DSS-compliant), reducing average response time by over 3x (from 7s to 2s) by refactoring business logic and database queries.</li><li>Engineered and implemented a high-performance data access layer using HandlerSocket for MySQL, bypassing the SQL parser for performance-critical workloads in the core banking system.</li><li>Architected and delivered over 20 new REST APIs and backend services for Workflow and Payments platforms using PHP and Laravel.</li><li>Built and deployed asynchronous task processing using message queues, decoupling services and improving resilience for payment processing.</li><li>Owned the full lifecycle of key microservices — architecture, implementation, deployment, monitoring, and on-call production support — in Kubernetes and AWS.</li><li>Mentored junior engineers and led code reviews, raising engineering standards across the payments team.</li></ul>
+            </div>
+            <ul class="flex flex-wrap gap-1.5 pt-3 pl-9"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">PHP</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Laravel</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">MySQL</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">HandlerSocket</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Message Queues</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Kubernetes</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">AWS</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">PCI DSS</span></li></ul>
+          </div>
         </div>
-      </header>
-
-      <section class="resume-section profile-section">
-    <h2>Profile</h2>
-    <p class="summary-text">Senior Backend Engineer with 8+ years of experience building high-load fintech and SaaS platforms. Specialized in PHP/Laravel and Node.js microservices, database optimization (MySQL, HandlerSocket), and AWS/Kubernetes infrastructure. Delivered core banking APIs at Dukascopy Bank, cutting critical response times by 3x, and engineered quote aggregation services processing 10+ external providers in under 500ms.</p>
-  </section>
-
-      <div class="metrics" aria-label="Career highlights">
-        <div><strong>8+ yrs</strong><span>commercial experience</span></div>
-        <div><strong>20+ APIs</strong><span>Workflow &amp; Payments</span></div>
-        <div><strong>3x faster</strong><span>critical API response time</span></div>
+      </div><div id="experience-seopa-ltd" class="group/experience screen-line-bottom scroll-mt-14 space-y-4 py-4">
+        <div class="flex items-start gap-3 sm:items-center">
+          <div class="flex size-6 shrink-0 items-center justify-center select-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="m18 16 4-4-4-4" /> <path d="m6 8-4 4 4 4" /> <path d="m14.5 4-5 16" /></svg>
+          </div>
+          <div class="flex min-w-0 flex-1 flex-col gap-x-3 gap-y-1 pr-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="text-xl/6 font-medium"><a class="link" href="https://www.linkedin.com/company/seopa-ltd/" target="_blank" rel="noopener">Seopa Ltd</a></h3>
+            <dl class="flex min-w-0 items-center gap-1.5 text-sm whitespace-nowrap text-muted-foreground">
+              <dt class="sr-only">Location</dt>
+              <dd class="truncate">United Kingdom</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="relative space-y-4 before:absolute before:left-3 before:h-full before:w-px before:bg-border">
+          <div class="group/experience-position relative">
+            <div class="pointer-events-none absolute bottom-0 left-3 hidden size-4 bg-background group-last/experience-position:flex" aria-hidden="true">
+              <span class="size-full -translate-y-2.25 rounded-bl-sm border-b border-l"></span>
+            </div>
+            <div>
+              <div class="relative z-1 mb-1 flex items-start gap-3 text-base">
+                <div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M12 12h.01" /> <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" /> <path d="M22 13a18.15 18.15 0 0 1-20 0" /> <rect width="20" height="14" x="2" y="6" rx="2" /></svg></div>
+                <h4 class="flex-1 font-medium text-balance">Senior Software Engineer</h4>
+              </div>
+              <dl class="flex flex-wrap items-center gap-2 pl-9 text-sm text-muted-foreground">
+                <div><dt class="sr-only">Employment period</dt><dd class="flex items-center gap-0.5 tabular-nums"><span>Jan 2021</span><span class="font-mono">—</span><span>Mar 2023</span></dd></div>
+                <div role="separator" aria-hidden="true" class="h-4 w-px shrink-0 self-center bg-border"></div>
+                <div><dt class="sr-only">Duration</dt><dd class="tabular-nums">2 yrs 3 mos</dd></div>
+              </dl>
+            </div>
+            <div class="typeset typeset-description pt-3 pb-1 pl-9">
+              <ul><li>Led development of an insurance quote aggregation service using Node.js and TypeScript, processing requests from 10+ external providers in under 500ms.</li><li>Migrated a monolithic PHP component to a standalone microservice, reducing deployment dependencies and improving team autonomy.</li><li>Optimized MongoDB queries for the user profile service, cutting read latency by 40% and supporting a 2x increase in traffic.</li><li>Built and maintained GitLab CI pipelines for automated testing and Kubernetes deployment, reducing manual deployment time by 80%.</li><li>Designed and implemented REST APIs for a React-based customer dashboard in collaboration with the frontend team.</li></ul>
+            </div>
+            <ul class="flex flex-wrap gap-1.5 pt-3 pl-9"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">PHP</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Node.js</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">TypeScript</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">MongoDB</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">React</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">GitLab CI</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Kubernetes</span></li></ul>
+          </div>
+        </div>
+      </div><div id="experience-bestcomp-group" class="group/experience screen-line-bottom scroll-mt-14 space-y-4 py-4">
+        <div class="flex items-start gap-3 sm:items-center">
+          <div class="flex size-6 shrink-0 items-center justify-center select-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="m18 16 4-4-4-4" /> <path d="m6 8-4 4 4 4" /> <path d="m14.5 4-5 16" /></svg>
+          </div>
+          <div class="flex min-w-0 flex-1 flex-col gap-x-3 gap-y-1 pr-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="text-xl/6 font-medium">BestComp Group</h3>
+            <dl class="flex min-w-0 items-center gap-1.5 text-sm whitespace-nowrap text-muted-foreground">
+              <dt class="sr-only">Location</dt>
+              <dd class="truncate">Azerbaijan</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="relative space-y-4 before:absolute before:left-3 before:h-full before:w-px before:bg-border">
+          <div class="group/experience-position relative">
+            <div class="pointer-events-none absolute bottom-0 left-3 hidden size-4 bg-background group-last/experience-position:flex" aria-hidden="true">
+              <span class="size-full -translate-y-2.25 rounded-bl-sm border-b border-l"></span>
+            </div>
+            <div>
+              <div class="relative z-1 mb-1 flex items-start gap-3 text-base">
+                <div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /> <path d="M9 18h6" /> <path d="M10 22h4" /></svg></div>
+                <h4 class="flex-1 font-medium text-balance">Software Developer</h4>
+              </div>
+              <dl class="flex flex-wrap items-center gap-2 pl-9 text-sm text-muted-foreground">
+                <div><dt class="sr-only">Employment period</dt><dd class="flex items-center gap-0.5 tabular-nums"><span>Mar 2018</span><span class="font-mono">—</span><span>Dec 2020</span></dd></div>
+                <div role="separator" aria-hidden="true" class="h-4 w-px shrink-0 self-center bg-border"></div>
+                <div><dt class="sr-only">Duration</dt><dd class="tabular-nums">2 yrs 10 mos</dd></div>
+              </dl>
+            </div>
+            <div class="typeset typeset-description pt-3 pb-1 pl-9">
+              <ul><li>Built a PHP/Laravel REST API for an internal workflow automation tool, eliminating ~10 hours of manual data entry per week for the operations team.</li><li>Refactored a legacy data import module, improving stability and reducing processing errors by 50%.</li><li>Standardized engineering onboarding by containerizing the local development environment with Docker, reducing setup time from a full day to under an hour.</li></ul>
+            </div>
+            <ul class="flex flex-wrap gap-1.5 pt-3 pl-9"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">PHP</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Laravel</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">REST API</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Docker</span></li></ul>
+          </div>
+        </div>
+      </div><div id="experience-bitep" class="group/experience screen-line-bottom scroll-mt-14 space-y-4 py-4">
+        <div class="flex items-start gap-3 sm:items-center">
+          <div class="flex size-6 shrink-0 items-center justify-center select-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="m18 16 4-4-4-4" /> <path d="m6 8-4 4 4 4" /> <path d="m14.5 4-5 16" /></svg>
+          </div>
+          <div class="flex min-w-0 flex-1 flex-col gap-x-3 gap-y-1 pr-1 sm:flex-row sm:items-baseline sm:justify-between">
+            <h3 class="text-xl/6 font-medium">Bitep</h3>
+            <dl class="flex min-w-0 items-center gap-1.5 text-sm whitespace-nowrap text-muted-foreground">
+              <dt class="sr-only">Location</dt>
+              <dd class="truncate">Azerbaijan</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="relative space-y-4 before:absolute before:left-3 before:h-full before:w-px before:bg-border">
+          <div class="group/experience-position relative">
+            <div class="pointer-events-none absolute bottom-0 left-3 hidden size-4 bg-background group-last/experience-position:flex" aria-hidden="true">
+              <span class="size-full -translate-y-2.25 rounded-bl-sm border-b border-l"></span>
+            </div>
+            <div>
+              <div class="relative z-1 mb-1 flex items-start gap-3 text-base">
+                <div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="m18 16 4-4-4-4" /> <path d="m6 8-4 4 4 4" /> <path d="m14.5 4-5 16" /></svg></div>
+                <h4 class="flex-1 font-medium text-balance">Software Developer</h4>
+              </div>
+              <dl class="flex flex-wrap items-center gap-2 pl-9 text-sm text-muted-foreground">
+                <div><dt class="sr-only">Employment period</dt><dd class="flex items-center gap-0.5 tabular-nums"><span>Feb 2017</span><span class="font-mono">—</span><span>Mar 2018</span></dd></div>
+                <div role="separator" aria-hidden="true" class="h-4 w-px shrink-0 self-center bg-border"></div>
+                <div><dt class="sr-only">Duration</dt><dd class="tabular-nums">1 yr 2 mos</dd></div>
+              </dl>
+            </div>
+            <div class="typeset typeset-description pt-3 pb-1 pl-9">
+              <ul><li>Developed and maintained client web applications using PHP/Laravel, including REST APIs and third-party service integrations.</li><li>Managed delivery across requirements, testing, deployment, and maintenance in a Dockerized environment.</li></ul>
+            </div>
+            <ul class="flex flex-wrap gap-1.5 pt-3 pl-9"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">PHP</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Laravel</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">REST API</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Docker</span></li></ul>
+          </div>
+        </div>
+      </div></div>
+      </section>
+        <div class="stripe-divider h-(--separator-height) w-full border-x"></div>
+        <section id="development" data-slot="panel" class="screen-line-top screen-line-bottom border-x screen-line-bottom-border ">
+        <header data-slot="panel-header" class="screen-line-bottom px-4">
+          <h2 data-slot="panel-title" class="group/panel-title relative inline-block font-heading text-3xl font-medium tracking-tight text-balance">
+            <a href="#development">Professional Development</a><sup class="top-[-0.75em] ml-1 text-sm font-medium tracking-normal text-muted-foreground">(Jan 2026 — Present)</sup><button type="button" class="copy-heading absolute top-1 ml-1 size-7 shrink-0 cursor-pointer rounded-md border-none text-muted-foreground opacity-0 transition-opacity group-hover/panel-title:opacity-100 focus-visible:opacity-100" data-heading-id="development" aria-label="Copy link to section"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg></button>
+          </h2>
+        </header>
+        <div data-slot="panel-body" class="p-4"><div class="flex items-start gap-3">
+          <div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /> <path d="M9 18h6" /> <path d="M10 22h4" /></svg></div>
+          <div class="typeset typeset-description flex-1">
+            <ul><li>Deepening AI-assisted engineering: LLM APIs, RAG, MCP, AI-driven development workflows.</li><li>Expanding backend stack beyond PHP into Node.js and Go (TypeScript, Go).</li></ul>
+          </div>
+        </div></div>
+      </section>
+        <div class="stripe-divider h-(--separator-height) w-full border-x"></div>
+        <section id="projects" data-slot="panel" class="screen-line-top screen-line-bottom border-x screen-line-bottom-border ">
+        <header data-slot="panel-header" class="screen-line-bottom px-4">
+          <h2 data-slot="panel-title" class="group/panel-title relative inline-block font-heading text-3xl font-medium tracking-tight text-balance">
+            <a href="#projects">Projects</a><sup class="top-[-0.75em] ml-1 text-sm font-medium tracking-normal text-muted-foreground">(2)</sup><button type="button" class="copy-heading absolute top-1 ml-1 size-7 shrink-0 cursor-pointer rounded-md border-none text-muted-foreground opacity-0 transition-opacity group-hover/panel-title:opacity-100 focus-visible:opacity-100" data-heading-id="projects" aria-label="Copy link to section"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg></button>
+          </h2>
+        </header>
+        <div data-slot="panel-body" class="p-4"><div class="divide-y divide-line border-y border-line"><div class="group/project" data-state="open">
+        <div class="relative flex items-center transition-[background-color] ease-out hover:bg-accent-muted">
+          <div class="mx-4 flex size-6 shrink-0 items-center justify-center select-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="m18 16 4-4-4-4" /> <path d="m6 8-4 4 4 4" /> <path d="m14.5 4-5 16" /></svg></div>
+          <div class="flex flex-1 items-center gap-2 border-l border-dashed border-line p-4">
+            <div class="flex-1">
+              <h3 class="mb-1 leading-snug font-medium text-balance">EImtahan.az · Personal Project</h3>
+              <dl class="text-sm text-muted-foreground">
+                <dt class="sr-only">Period</dt>
+                <dd class="flex items-center gap-0.5 tabular-nums"><span>Jun 2024</span><span class="font-mono">—</span><span>Nov 2024</span></dd>
+              </dl>
+            </div>
+            <div class="shrink-0 text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></div>
+          </div>
+        </div>
+        <div class="overflow-hidden">
+          <div class="space-y-4 border-t border-line p-4">
+            <div class="typeset typeset-description">
+              <ul><li>Architected a scalable SaaS exam platform (PHP/Laravel, Next.js/React) supporting concurrent sessions with real-time reporting.</li><li>Integrated LLM APIs for AI-powered question generation, automating content creation for educators.</li></ul>
+            </div>
+            <ul class="flex flex-wrap gap-1.5"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">PHP</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Laravel</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Next.js</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">React</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">LLM APIs</span></li></ul>
+          </div>
+        </div>
+      </div><div class="group/project" data-state="open">
+        <div class="relative flex items-center transition-[background-color] ease-out hover:bg-accent-muted">
+          <div class="mx-4 flex size-6 shrink-0 items-center justify-center select-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-5"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-5" aria-hidden="true"><path d="m18 16 4-4-4-4" /> <path d="m6 8-4 4 4 4" /> <path d="m14.5 4-5 16" /></svg></div>
+          <div class="flex flex-1 items-center gap-2 border-l border-dashed border-line p-4">
+            <div class="flex-1">
+              <h3 class="mb-1 leading-snug font-medium text-balance">hire.az · Personal Project</h3>
+              <dl class="text-sm text-muted-foreground">
+                <dt class="sr-only">Period</dt>
+                <dd class="flex items-center gap-0.5 tabular-nums"><span>May 2019</span><span class="font-mono">—</span><span>Jun 2022</span></dd>
+              </dl>
+            </div>
+            <div class="shrink-0 text-muted-foreground"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></div>
+          </div>
+        </div>
+        <div class="overflow-hidden">
+          <div class="space-y-4 border-t border-line p-4">
+            <div class="typeset typeset-description">
+              <ul><li>Privacy-focused recruitment platform (PHP/Laravel, Next.js) with anonymous profiles; CI/CD on Vercel and Docker, Sentry observability.</li></ul>
+            </div>
+            <ul class="flex flex-wrap gap-1.5"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">PHP</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Laravel</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Next.js</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Sentry</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Vercel</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Docker</span></li></ul>
+          </div>
+        </div>
+      </div></div></div>
+      </section>
+        <div class="stripe-divider h-(--separator-height) w-full border-x"></div>
+        <section id="stack" data-slot="panel" class="screen-line-top screen-line-bottom border-x screen-line-bottom-border">
+        <header data-slot="panel-header" class="screen-line-bottom px-4">
+          <h2 data-slot="panel-title" class="group/panel-title relative inline-block font-heading text-3xl font-medium tracking-tight text-balance">
+            <a href="#stack">Stack</a><sup class="top-[-0.75em] ml-1 text-sm font-medium tracking-normal text-muted-foreground">(9)</sup><button type="button" class="copy-heading absolute top-1 ml-1 size-7 shrink-0 cursor-pointer rounded-md border-none text-muted-foreground opacity-0 transition-opacity group-hover/panel-title:opacity-100 focus-visible:opacity-100" data-heading-id="stack" aria-label="Copy link to section"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg></button>
+          </h2>
+        </header>
+        <div class="relative [--badge-height:--spacing(6)] [--col-left-width:--spacing(48)]">
+          <div class="pointer-events-none absolute inset-y-0 left-(--col-left-width) -z-1 w-px border-r border-dashed border-line max-sm:hidden" aria-hidden="true"></div>
+          <div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+          <div id="stack-languages" class="text-sm/(--badge-height)">
+            <span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">01</span>Languages
+          </div>
+          <ul aria-labelledby="stack-languages" class="flex flex-wrap gap-1.5"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">PHP 8.x</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">JavaScript (ES6+)</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">TypeScript</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Go (in progress)</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">SQL</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Bash/Shell</span></li></ul>
+        </div><div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+          <div id="stack-backend-apis" class="text-sm/(--badge-height)">
+            <span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">02</span>Backend &amp; APIs
+          </div>
+          <ul aria-labelledby="stack-backend-apis" class="flex flex-wrap gap-1.5"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Laravel</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Node.js</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">REST API</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Microservices</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">CQRS</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Event-Driven Architecture</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">WebSockets</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">JWT</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">PCI DSS</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Payment Gateways</span></li></ul>
+        </div><div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+          <div id="stack-databases-messaging" class="text-sm/(--badge-height)">
+            <span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">03</span>Databases &amp; Messaging
+          </div>
+          <ul aria-labelledby="stack-databases-messaging" class="flex flex-wrap gap-1.5"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">MySQL</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">PostgreSQL</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">MongoDB</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Redis</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">HandlerSocket</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Kafka</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">RabbitMQ</span></li></ul>
+        </div><div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+          <div id="stack-architecture-performance" class="text-sm/(--badge-height)">
+            <span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">04</span>Architecture &amp; Performance
+          </div>
+          <ul aria-labelledby="stack-architecture-performance" class="flex flex-wrap gap-1.5"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">High-Load Systems</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Distributed Systems</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">System Design</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">SOLID</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Performance Optimization</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Caching</span></li></ul>
+        </div><div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+          <div id="stack-infrastructure-cloud" class="text-sm/(--badge-height)">
+            <span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">05</span>Infrastructure &amp; Cloud
+          </div>
+          <ul aria-labelledby="stack-infrastructure-cloud" class="flex flex-wrap gap-1.5"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Docker</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Kubernetes</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Nginx</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">AWS</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Terraform</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">GitHub Actions</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">GitLab CI/CD</span></li></ul>
+        </div><div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+          <div id="stack-frontend" class="text-sm/(--badge-height)">
+            <span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">06</span>Frontend
+          </div>
+          <ul aria-labelledby="stack-frontend" class="flex flex-wrap gap-1.5"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">React</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Next.js</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Vue.js</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Nuxt.js</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Angular</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Tailwind CSS</span></li></ul>
+        </div><div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+          <div id="stack-testing-quality" class="text-sm/(--badge-height)">
+            <span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">07</span>Testing &amp; Quality
+          </div>
+          <ul aria-labelledby="stack-testing-quality" class="flex flex-wrap gap-1.5"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">PHPUnit</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">PHPStan</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Unit Testing</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Integration Testing</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Swagger/OpenAPI</span></li></ul>
+        </div><div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+          <div id="stack-observability" class="text-sm/(--badge-height)">
+            <span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">08</span>Observability
+          </div>
+          <ul aria-labelledby="stack-observability" class="flex flex-wrap gap-1.5"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Sentry</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Logging</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Monitoring</span></li></ul>
+        </div><div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+          <div id="stack-ai-assisted-engineering" class="text-sm/(--badge-height)">
+            <span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">09</span>AI-Assisted Engineering
+          </div>
+          <ul aria-labelledby="stack-ai-assisted-engineering" class="flex flex-wrap gap-1.5"><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">OpenAI Codex</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Claude</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">MCP</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">RAG</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">Prompt &amp; Context Engineering</span></li><li class="flex"><span data-slot="tag" class="inline-flex items-center rounded-full border bg-zinc-50 px-1.5 py-0.5 font-mono text-xs text-muted-foreground dark:bg-zinc-900">AI-Assisted Code Review</span></li></ul>
+        </div>
+        </div>
+      </section>
+        <div class="stripe-divider h-(--separator-height) w-full border-x"></div>
+        <section id="recommendations" data-slot="panel" class="screen-line-top screen-line-bottom border-x screen-line-bottom-border ">
+        <header data-slot="panel-header" class="screen-line-bottom px-4">
+          <h2 data-slot="panel-title" class="group/panel-title relative inline-block font-heading text-3xl font-medium tracking-tight text-balance">
+            <a href="#recommendations">Recommendations</a><sup class="top-[-0.75em] ml-1 text-sm font-medium tracking-normal text-muted-foreground">(5)</sup><button type="button" class="copy-heading absolute top-1 ml-1 size-7 shrink-0 cursor-pointer rounded-md border-none text-muted-foreground opacity-0 transition-opacity group-hover/panel-title:opacity-100 focus-visible:opacity-100" data-heading-id="recommendations" aria-label="Copy link to section"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg></button>
+          </h2>
+          <div data-slot="panel-description" class="py-4 text-base text-balance text-muted-foreground">Received from colleagues and managers. <a class="link" href="https://www.linkedin.com/in/hose1021/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noopener">View all on LinkedIn</a></div>
+        </header>
+        <div data-slot="panel-body" class="p-4"><div class="grid gap-2 sm:grid-cols-2"><figure class="group/testimonial relative flex h-full flex-col justify-between gap-4 rounded-xl bg-background p-4 inset-ring-1 inset-ring-foreground/15 transition-[background-color] ease-out hover:bg-accent-muted">
+        <figcaption class="flex items-center gap-3">
+          <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-muted font-mono text-[11px] text-muted-foreground inset-ring-1 inset-ring-foreground/15">AK</div>
+          <div class="min-w-0">
+            <div class="truncate font-medium">
+              <a href="https://www.linkedin.com/in/thehovdev/" target="_blank" rel="noopener"><span class="absolute inset-0" aria-hidden="true"></span>Afgan Khalilov</a>
+            </div>
+            <div class="text-sm text-muted-foreground">Senior Fullstack Typescript Developer | Tech Lead</div>
+          </div>
+          <div class="ml-auto shrink-0 font-mono text-xs text-muted-foreground tabular-nums">May 2026</div>
+        </figcaption>
+        <p class="text-sm text-muted-foreground">Worked with Mikail in the same team</p>
+      </figure><figure class="group/testimonial relative flex h-full flex-col justify-between gap-4 rounded-xl bg-background p-4 inset-ring-1 inset-ring-foreground/15 transition-[background-color] ease-out hover:bg-accent-muted">
+        <figcaption class="flex items-center gap-3">
+          <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-muted font-mono text-[11px] text-muted-foreground inset-ring-1 inset-ring-foreground/15">JL</div>
+          <div class="min-w-0">
+            <div class="truncate font-medium">
+              <a href="https://www.linkedin.com/in/jelena-litvinenko-7a4425119/" target="_blank" rel="noopener"><span class="absolute inset-0" aria-hidden="true"></span>Jelena Litvinenko</a>
+            </div>
+            <div class="text-sm text-muted-foreground">Project Manager at Dukascopy Bank SA</div>
+          </div>
+          <div class="ml-auto shrink-0 font-mono text-xs text-muted-foreground tabular-nums">May 2025</div>
+        </figcaption>
+        <p class="text-sm text-muted-foreground">Was Mikail's direct manager</p>
+      </figure><figure class="group/testimonial relative flex h-full flex-col justify-between gap-4 rounded-xl bg-background p-4 inset-ring-1 inset-ring-foreground/15 transition-[background-color] ease-out hover:bg-accent-muted">
+        <figcaption class="flex items-center gap-3">
+          <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-muted font-mono text-[11px] text-muted-foreground inset-ring-1 inset-ring-foreground/15">DK</div>
+          <div class="min-w-0">
+            <div class="truncate font-medium">
+              <a href="https://www.linkedin.com/in/denirun/" target="_blank" rel="noopener"><span class="absolute inset-0" aria-hidden="true"></span>Deniss Kozlovs</a>
+            </div>
+            <div class="text-sm text-muted-foreground">Senior Developer at Dukascopy Bank (Suisse) SA</div>
+          </div>
+          <div class="ml-auto shrink-0 font-mono text-xs text-muted-foreground tabular-nums">May 2024</div>
+        </figcaption>
+        <p class="text-sm text-muted-foreground">Was Mikail's direct manager</p>
+      </figure><figure class="group/testimonial relative flex h-full flex-col justify-between gap-4 rounded-xl bg-background p-4 inset-ring-1 inset-ring-foreground/15 transition-[background-color] ease-out hover:bg-accent-muted">
+        <figcaption class="flex items-center gap-3">
+          <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-muted font-mono text-[11px] text-muted-foreground inset-ring-1 inset-ring-foreground/15">KB</div>
+          <div class="min-w-0">
+            <div class="truncate font-medium">
+              <a href="https://www.linkedin.com/in/karyna-bondarenko-5361b318b/" target="_blank" rel="noopener"><span class="absolute inset-0" aria-hidden="true"></span>Karyna Bondarenko</a>
+            </div>
+            <div class="text-sm text-muted-foreground">PHP Software Engineer</div>
+          </div>
+          <div class="ml-auto shrink-0 font-mono text-xs text-muted-foreground tabular-nums">January 2024</div>
+        </figcaption>
+        <p class="text-sm text-muted-foreground">Worked with Mikail in the same team</p>
+      </figure><figure class="group/testimonial relative flex h-full flex-col justify-between gap-4 rounded-xl bg-background p-4 inset-ring-1 inset-ring-foreground/15 transition-[background-color] ease-out hover:bg-accent-muted">
+        <figcaption class="flex items-center gap-3">
+          <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-muted font-mono text-[11px] text-muted-foreground inset-ring-1 inset-ring-foreground/15">VZ</div>
+          <div class="min-w-0">
+            <div class="truncate font-medium">
+              <a href="https://www.linkedin.com/in/vadym-zotov/" target="_blank" rel="noopener"><span class="absolute inset-0" aria-hidden="true"></span>Vadym Zotov</a>
+            </div>
+            <div class="text-sm text-muted-foreground">Commercial Director · Co-founder at Devox Software</div>
+          </div>
+          <div class="ml-auto shrink-0 font-mono text-xs text-muted-foreground tabular-nums">February 2023</div>
+        </figcaption>
+        <p class="text-sm text-muted-foreground">Was Mikail's direct manager</p>
+      </figure></div></div>
+      </section>
+        <div class="stripe-divider h-(--separator-height) w-full border-x"></div>
+        <section id="education" data-slot="panel" class="screen-line-top screen-line-bottom border-x screen-line-bottom-border ">
+        <header data-slot="panel-header" class="screen-line-bottom px-4">
+          <h2 data-slot="panel-title" class="group/panel-title relative inline-block font-heading text-3xl font-medium tracking-tight text-balance">
+            <a href="#education">Education</a><sup class="top-[-0.75em] ml-1 text-sm font-medium tracking-normal text-muted-foreground">(2)</sup><button type="button" class="copy-heading absolute top-1 ml-1 size-7 shrink-0 cursor-pointer rounded-md border-none text-muted-foreground opacity-0 transition-opacity group-hover/panel-title:opacity-100 focus-visible:opacity-100" data-heading-id="education" aria-label="Copy link to section"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg></button>
+          </h2>
+        </header>
+        <div data-slot="panel-body" class="p-4"><div class="-m-4"><div id="education-1" class="screen-line-bottom scroll-mt-14 p-4 last:screen-line-bottom-none">
+        <div class="group/education-item relative before:absolute before:left-3 before:h-full before:w-px before:bg-border">
+          <div class="pointer-events-none absolute bottom-0 left-3 hidden size-4 bg-background group-last/education-item:flex" aria-hidden="true">
+            <span class="size-full -translate-y-2.25 rounded-bl-sm border-b border-l"></span>
+          </div>
+          <div>
+            <div class="relative z-1 mb-1 flex items-start gap-3 text-base">
+              <div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /> <path d="M22 10v6" /> <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg></div>
+              <h3 class="flex-1 font-medium text-balance">Lomonosov Moscow State University (MSU)</h3>
+            </div>
+            <dl class="flex flex-wrap items-center gap-2 pl-9 text-sm text-muted-foreground">
+              <div><dt class="sr-only">Study period</dt><dd class="flex items-center gap-0.5 tabular-nums"><span>2013</span><span class="font-mono">—</span><span>2019</span></dd></div>
+              <div role="separator" aria-hidden="true" class="h-4 w-px shrink-0 self-center bg-border"></div>
+              <div><dt class="sr-only">Degree</dt><dd>Mathematics and Computer Science</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div><div id="education-2" class="screen-line-bottom scroll-mt-14 p-4 last:screen-line-bottom-none">
+        <div class="group/education-item relative before:absolute before:left-3 before:h-full before:w-px before:bg-border">
+          <div class="pointer-events-none absolute bottom-0 left-3 hidden size-4 bg-background group-last/education-item:flex" aria-hidden="true">
+            <span class="size-full -translate-y-2.25 rounded-bl-sm border-b border-l"></span>
+          </div>
+          <div>
+            <div class="relative z-1 mb-1 flex items-start gap-3 text-base">
+              <div data-slot="icon-tile" class="flex size-6 shrink-0 items-center justify-center rounded-md border border-muted-foreground/15 bg-muted text-muted-foreground ring-1 ring-border/50 ring-offset-1 ring-offset-background select-none dark:ring-line [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /> <path d="M22 10v6" /> <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg></div>
+              <h3 class="flex-1 font-medium text-balance">Baku State University</h3>
+            </div>
+            <dl class="flex flex-wrap items-center gap-2 pl-9 text-sm text-muted-foreground">
+              <div><dt class="sr-only">Study period</dt><dd class="flex items-center gap-0.5 tabular-nums"><span>2019</span><span class="font-mono">—</span><span>2021</span></dd></div>
+              <div role="separator" aria-hidden="true" class="h-4 w-px shrink-0 self-center bg-border"></div>
+              <div><dt class="sr-only">Degree</dt><dd>Bachelor's Degree in Mathematics and Computer Science</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div></div></div>
+      </section>
+        <div class="stripe-divider h-(--separator-height) w-full border-x"></div>
+        <section id="languages" data-slot="panel" class="screen-line-top screen-line-bottom border-x screen-line-bottom-border">
+        <header data-slot="panel-header" class="screen-line-bottom px-4">
+          <h2 data-slot="panel-title" class="group/panel-title relative inline-block font-heading text-3xl font-medium tracking-tight text-balance">
+            <a href="#languages">Languages</a><button type="button" class="copy-heading absolute top-1 ml-1 size-7 shrink-0 cursor-pointer rounded-md border-none text-muted-foreground opacity-0 transition-opacity group-hover/panel-title:opacity-100 focus-visible:opacity-100" data-heading-id="languages" aria-label="Copy link to section"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg></button>
+          </h2>
+        </header>
+        <div class="relative [--badge-height:--spacing(6)] [--col-left-width:--spacing(48)]">
+          <div class="pointer-events-none absolute inset-y-0 left-(--col-left-width) -z-1 w-px border-r border-dashed border-line max-sm:hidden" aria-hidden="true"></div>
+          <div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+        <div class="text-sm/(--badge-height)"><span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">01</span>Russian</div>
+        <div class="text-sm text-muted-foreground">Native</div>
+      </div><div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+        <div class="text-sm/(--badge-height)"><span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">02</span>Azerbaijani</div>
+        <div class="text-sm text-muted-foreground">Native</div>
+      </div><div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+        <div class="text-sm/(--badge-height)"><span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">03</span>English</div>
+        <div class="text-sm text-muted-foreground">Professional Working Proficiency (B2)</div>
+      </div><div class="grid items-start gap-y-2 border-b border-line px-4 py-4 last:border-none sm:grid-cols-[var(--col-left-width)_1fr]">
+        <div class="text-sm/(--badge-height)"><span class="mr-1.5 font-mono text-muted-foreground/80 select-none" aria-hidden="true">04</span>Turkish</div>
+        <div class="text-sm text-muted-foreground">Intermediate (B1)</div>
       </div>
-
-      <section class="resume-section experience-section">
-    <h2>Experience</h2>
-    <div class="role-stack"><article class="resume-role">
-    <header class="role-header">
-      <div>
-        <h3><a class="resume-link" href="https://www.linkedin.com/company/dukascopy-bank-sa/" target="_blank" rel="noreferrer">Dukascopy Bank SA · Switzerland <span aria-hidden="true">↗</span></a></h3>
-        <p class="role-title">Senior Software Engineer</p>
+        </div>
+      </section>
       </div>
-      <p class="role-date">Aug 2023 – Jan 2026</p>
-    </header>
-    <p class="company-description">Swiss online bank providing trading services and banking solutions.</p>
-    <ul class="bullet-list"><li>Optimized critical payment and workflow APIs, reducing average response time by over 3x (from 7s to 2s) by refactoring business logic and database queries.</li><li>Engineered and implemented a high-performance data access layer using HandlerSocket for MySQL, bypassing the SQL parser for performance-critical workloads in the core banking system.</li><li>Architected and delivered over 20 new REST APIs and backend services for Workflow and Payments platforms using PHP and Laravel.</li><li>Built and deployed asynchronous task processing using message queues, decoupling services and improving resilience for payment processing.</li><li>Owned the full development lifecycle for key microservices, from architecture and implementation to deployment and monitoring in Kubernetes and AWS.</li></ul>
-    <ul class="tag-list"><li>PHP</li><li>Laravel</li><li>MySQL</li><li>HandlerSocket</li><li>Message Queues</li><li>Kubernetes</li><li>AWS</li></ul>
-  </article><article class="resume-role">
-    <header class="role-header">
-      <div>
-        <h3><a class="resume-link" href="https://www.linkedin.com/company/seopa-ltd/" target="_blank" rel="noreferrer">Seopa Ltd · United Kingdom <span aria-hidden="true">↗</span></a></h3>
-        <p class="role-title">Senior Software Engineer</p>
-      </div>
-      <p class="role-date">Jan 2021 – Mar 2023</p>
-    </header>
-    <p class="company-description">Parent company of UK financial comparison platforms Quotezone.co.uk and CompareNI.com.</p>
-    <ul class="bullet-list"><li>Led development of an insurance quote aggregation service using Node.js and TypeScript, processing requests from 10+ external providers in under 500ms.</li><li>Migrated a monolithic PHP component to a standalone microservice, reducing deployment dependencies and improving team autonomy.</li><li>Optimized MongoDB queries for the user profile service, cutting read latency by 40% and supporting a 2x increase in traffic.</li><li>Built and maintained GitLab CI pipelines for automated testing and Kubernetes deployment, reducing manual deployment time by 80%.</li><li>Designed and implemented REST APIs for a React-based customer dashboard in collaboration with the frontend team.</li></ul>
-    <ul class="tag-list"><li>PHP</li><li>Node.js</li><li>TypeScript</li><li>MongoDB</li><li>React</li><li>GitLab CI</li><li>Kubernetes</li></ul>
-  </article></div>
-  </section>
-    </div>
+    </main>
 
-    <div class="resume-page second-page">
-      <section class="resume-section experience-section">
-    <h2>Experience</h2>
-    <div class="role-stack compact-roles"><article class="resume-role">
-    <header class="role-header">
-      <div>
-        <h3>BestComp Group · Azerbaijan</h3>
-        <p class="role-title">Software Developer</p>
-      </div>
-      <p class="role-date">Mar 2018 – Dec 2020</p>
-    </header>
-    <p class="company-description">Leading IT solutions provider and system integrator in Azerbaijan.</p>
-    <ul class="bullet-list"><li>Built a PHP/Laravel REST API for an internal workflow automation tool, eliminating ~10 hours of manual data entry per week for the operations team.</li><li>Refactored a legacy data import module, improving stability and reducing processing errors by 50%.</li><li>Standardized engineering onboarding by containerizing the local development environment with Docker, reducing setup time from a full day to under an hour.</li></ul>
-    <ul class="tag-list"><li>PHP</li><li>Laravel</li><li>REST API</li><li>Docker</li></ul>
-  </article><article class="resume-role">
-    <header class="role-header">
-      <div>
-        <h3>Bitep · Azerbaijan</h3>
-        <p class="role-title">Software Developer</p>
-      </div>
-      <p class="role-date">Feb 2017 – Mar 2018</p>
-    </header>
-    <ul class="bullet-list"><li>Developed and maintained client web applications using PHP/Laravel, including REST APIs and third-party service integrations.</li><li>Managed delivery across requirements, testing, deployment, and maintenance in a Dockerized environment.</li></ul>
-    <ul class="tag-list"><li>PHP</li><li>Laravel</li><li>REST API</li><li>Docker</li></ul>
-  </article></div>
-  </section>
+    <footer class="max-w-screen overflow-x-clip px-2">
+      <div class="mx-auto border-x border-line md:max-w-3xl">
+        <div class="screen-line-top screen-line-bottom">
+          <div class="stripe-divider h-12"></div>
+        </div>
 
-      <section class="resume-section projects-section">
-    <h2>Selected Projects</h2>
-    <div class="project-grid"><article class="project-card">
-    <header class="project-header">
-      <h3>EImtahan.az · Personal Project</h3>
-      <p class="role-date">Jun 2024 – Nov 2024</p>
-    </header>
-    <ul class="bullet-list"><li>Architected a scalable SaaS education platform using PHP/Laravel and Next.js/React, supporting concurrent exam sessions with real-time reporting.</li><li>Engineered a high-load exam system with concurrent sessions, real-time reporting, and role-based access.</li><li>Integrated LLM APIs for AI-powered question generation, automating content creation for educators.</li></ul>
-    <ul class="tag-list"><li>PHP</li><li>Laravel</li><li>Next.js</li><li>React</li><li>LLM APIs</li></ul>
-  </article><article class="project-card">
-    <header class="project-header">
-      <h3>hire.az · Personal Project</h3>
-      <p class="role-date">May 2019 – Jun 2022</p>
-    </header>
-    <ul class="bullet-list"><li>Developed a privacy-focused recruitment platform with anonymous candidate profiles using PHP/Laravel and Next.js.</li><li>Integrated Sentry and Promptwatch for production observability and faster issue resolution.</li><li>Managed CI/CD and infrastructure on Vercel and Docker for reliable, frequent deployments.</li></ul>
-    <ul class="tag-list"><li>PHP</li><li>Laravel</li><li>Next.js</li><li>Sentry</li><li>Vercel</li><li>Docker</li></ul>
-  </article></div>
-  </section>
-
-      <div class="details-grid">
-        <section class="resume-section skills-section">
-    <h2>Skills</h2>
-    <div class="skill-groups"><div class="skill-group"><h3>Languages</h3><p>PHP 8.x, JavaScript (ES6+), TypeScript, SQL, Bash/Shell</p></div><div class="skill-group"><h3>Backend &amp; APIs</h3><p>Laravel, Node.js, REST API, Microservices, CQRS, Event-Driven Architecture, WebSockets, JWT</p></div><div class="skill-group"><h3>Databases &amp; Messaging</h3><p>MySQL, PostgreSQL, MongoDB, Redis, HandlerSocket, Kafka, RabbitMQ</p></div><div class="skill-group"><h3>Architecture &amp; Performance</h3><p>High-Load Systems, Distributed Systems, System Design, SOLID, Performance Optimization, Caching</p></div><div class="skill-group"><h3>Infrastructure &amp; Cloud</h3><p>Docker, Kubernetes, Nginx, AWS, Terraform, GitHub Actions, GitLab CI/CD</p></div><div class="skill-group"><h3>Frontend</h3><p>React, Next.js, Vue.js, Nuxt.js, Angular, Tailwind CSS</p></div><div class="skill-group"><h3>Testing &amp; Quality</h3><p>PHPUnit, PHPStan, Unit Testing, Integration Testing, Swagger/OpenAPI</p></div><div class="skill-group"><h3>Observability</h3><p>Sentry, Logging, Monitoring</p></div><div class="skill-group"><h3>AI-Assisted Engineering</h3><p>OpenAI Codex, Claude, MCP, RAG, Prompt &amp; Context Engineering, AI-Assisted Code Review</p></div></div>
-  </section>
-        <div class="side-details">
-          <section class="resume-section ">
-    <h2>Languages</h2>
-    <ul class="plain-list"><li><strong>Russian</strong><span>Native</span></li><li><strong>Azerbaijani</strong><span>Native</span></li><li><strong>English</strong><span>Professional Working Proficiency (B2)</span></li><li><strong>Turkish</strong><span>Intermediate (B1)</span></li></ul>
-  </section>
-          <section class="resume-section ">
-    <h2>Education</h2>
-    <div class="education-list"><div><h3>Baku State University</h3><p>Bachelor's Degree in Mathematics and Computer Science</p><span>2019 – 2021</span></div><div><h3>Lomonosov Moscow State University (MSU)</h3><p>Coursework in Mathematics and Computer Science (transferred)</p><span>2013 – 2019</span></div></div>
-  </section>
+        <div class="screen-line-top screen-line-bottom flex w-full before:z-1 after:z-1">
+          <div class="mx-auto flex items-center justify-center gap-3 border-x border-line bg-background px-4"><a class="flex items-center text-muted-foreground transition-[color] hover:text-foreground" href="https://github.com/hose1021" target="_blank" rel="noopener" aria-label="GitHub profile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /> <path d="M9 18c-4.51 2-5-2-7-2" /></svg></a><div class="flex h-11 w-px bg-line"></div><a class="flex items-center text-muted-foreground transition-[color] hover:text-foreground" href="https://www.linkedin.com/in/hose1021/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /> <rect width="4" height="12" x="2" y="9" /> <circle cx="4" cy="4" r="2" /></svg></a><div class="flex h-11 w-px bg-line"></div><a class="flex items-center text-muted-foreground transition-[color] hover:text-foreground" href="https://t.me/hose1021" target="_blank" rel="noopener" aria-label="Telegram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="size-4" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /> <path d="m21.854 2.147-10.94 10.939" /></svg></a></div>
         </div>
       </div>
+      <div class="h-(--fade-bottom-height)"></div>
+    </footer>
+  </div>
 
-    </div>
+  <div class="pointer-events-none fixed inset-x-0 bottom-0 z-50">
+    <div class="h-(--fade-bottom-height) bg-linear-to-b from-transparent to-background"></div>
+    <div class="bg-background pb-[env(safe-area-inset-bottom,0)]"></div>
+  </div>
 
-    <div class="resume-page second-page recommendations-page">
-      <section class="resume-section recommendations-section">
-    <h2>Recommendations</h2>
-    <p class="summary-text recommendations-summary">Selected recommendations from colleagues and managers. <a class="resume-link" href="https://www.linkedin.com/in/hose1021/details/recommendations/?detailScreenTabIndex=0" target="_blank" rel="noreferrer">View all on LinkedIn <span aria-hidden="true">↗</span></a></p><div class="role-stack recommendations-list"><article class="resume-role recommendation-entry">
-    <header class="role-header">
-      <div>
-        <h3><a class="resume-link" href="https://www.linkedin.com/in/thehovdev/" target="_blank" rel="noreferrer">Afgan Khalilov <span aria-hidden="true">↗</span></a></h3>
-        <p class="role-title">Senior Fullstack Typescript Developer | Tech Lead</p>
-      </div>
-      <p class="role-date">May 2026</p>
-    </header>
-    <p class="company-description">Worked with Mikail in the same team</p>
-  </article><article class="resume-role recommendation-entry">
-    <header class="role-header">
-      <div>
-        <h3><a class="resume-link" href="https://www.linkedin.com/in/jelena-litvinenko-7a4425119/" target="_blank" rel="noreferrer">Jelena Litvinenko <span aria-hidden="true">↗</span></a></h3>
-        <p class="role-title">Project Manager at Dukascopy Bank SA</p>
-      </div>
-      <p class="role-date">May 2025</p>
-    </header>
-    <p class="company-description">Was Mikail's direct manager</p>
-  </article><article class="resume-role recommendation-entry">
-    <header class="role-header">
-      <div>
-        <h3><a class="resume-link" href="https://www.linkedin.com/in/denirun/" target="_blank" rel="noreferrer">Deniss Kozlovs <span aria-hidden="true">↗</span></a></h3>
-        <p class="role-title">Senior Developer at Dukascopy Bank (Suisse) SA</p>
-      </div>
-      <p class="role-date">May 2024</p>
-    </header>
-    <p class="company-description">Was Mikail's direct manager</p>
-  </article><article class="resume-role recommendation-entry">
-    <header class="role-header">
-      <div>
-        <h3><a class="resume-link" href="https://www.linkedin.com/in/karyna-bondarenko-5361b318b/" target="_blank" rel="noreferrer">Karyna Bondarenko <span aria-hidden="true">↗</span></a></h3>
-        <p class="role-title">PHP Software Engineer</p>
-      </div>
-      <p class="role-date">January 2024</p>
-    </header>
-    <p class="company-description">Worked with Mikail in the same team</p>
-  </article><article class="resume-role recommendation-entry">
-    <header class="role-header">
-      <div>
-        <h3><a class="resume-link" href="https://www.linkedin.com/in/vadym-zotov/" target="_blank" rel="noreferrer">Vadym Zotov <span aria-hidden="true">↗</span></a></h3>
-        <p class="role-title">Commercial Director · Co-founder at Devox Software</p>
-      </div>
-      <p class="role-date">February 2023</p>
-    </header>
-    <p class="company-description">Was Mikail's direct manager</p>
-  </article></div>
-  </section>
-    </div>
-  </main>
+  <script>
+    (function () {
+      var root = document.documentElement;
+
+      /* Theme toggle, hotkey D, and the theme-color meta tag. */
+      var toggle = document.getElementById("theme-toggle");
+      function applyTheme(dark) {
+        root.classList.toggle("dark", dark);
+        root.classList.toggle("light", !dark);
+        root.style.colorScheme = dark ? "dark" : "light";
+        localStorage.setItem("theme", dark ? "dark" : "light");
+      }
+      toggle.addEventListener("click", function () {
+        applyTheme(!root.classList.contains("dark"));
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key !== "d" && event.key !== "D") return;
+        var tag = (event.target.tagName || "").toLowerCase();
+        if (event.metaKey || event.ctrlKey || event.altKey || tag === "input" || tag === "textarea") return;
+        event.preventDefault();
+        applyTheme(!root.classList.contains("dark"));
+      });
+
+      /* Rotating taglines in the profile header. */
+      var items = document.querySelectorAll("[data-flip-item]");
+      if (items.length > 1 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        var current = 0;
+        setInterval(function () {
+          var previous = items[current];
+          current = (current + 1) % items.length;
+          var next = items[current];
+          previous.style.opacity = "0";
+          previous.style.transform = "translateY(-8px)";
+          next.style.opacity = "1";
+          next.style.transform = "translateY(0)";
+        }, 4000);
+      }
+
+      /* Active section in the header nav. */
+      var nav = document.querySelector("[data-nav]");
+      var sections = ["experience", "projects", "stack", "recommendations", "education"]
+        .map(function (id) { return document.getElementById(id); })
+        .filter(Boolean);
+      if (nav && sections.length) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            nav.querySelectorAll("a").forEach(function (link) {
+              if (link.getAttribute("href") === "#" + entry.target.id) link.setAttribute("aria-current", "page");
+              else link.removeAttribute("aria-current");
+            });
+          });
+        }, { rootMargin: "-20% 0px -70% 0px" });
+        sections.forEach(function (section) { observer.observe(section); });
+      }
+
+      /* Copy a link to a section, and the email address. */
+      function copy(text, button) {
+        if (button.dataset.busy) return;
+        navigator.clipboard.writeText(text).then(function () {
+          button.dataset.busy = "1";
+          button.dataset.markup = button.innerHTML;
+          button.classList.add("w-auto", "px-1", "font-mono", "text-[10px]");
+          button.textContent = "copied";
+          setTimeout(function () {
+            button.innerHTML = button.dataset.markup;
+            button.classList.remove("w-auto", "px-1", "font-mono", "text-[10px]");
+            delete button.dataset.busy;
+          }, 1200);
+        });
+      }
+      document.querySelectorAll(".copy-heading").forEach(function (button) {
+        button.addEventListener("click", function () {
+          copy(location.origin + location.pathname + "#" + button.dataset.headingId, button);
+        });
+      });
+      document.querySelectorAll(".copy-text").forEach(function (button) {
+        button.addEventListener("click", function () { copy(button.dataset.copy, button); });
+      });
+    })();
+  </script>
 </body>
 </html>
