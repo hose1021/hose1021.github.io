@@ -50,13 +50,13 @@
     },
     {
       "id": "feat-006",
-      "name": "Next content update",
-      "description": "Standing slot for the next resume change: edit data/resume.json, run ./init.sh, commit sources together with regenerated docs/ output. Replace this entry with the concrete change when one starts.",
+      "name": "Content truth pass: page aligned with the verified career record",
+      "description": "Rebuilt the page's content from the verified record: Dukascopy bullets around the workflow rule engine (103 rule classes, 18 validators), the 145 HTTP endpoints (63 API, 81 web), the 96-method JSON-RPC layer, the PHP 8.2 migration, the GDPR erasure pipeline, the S3 and Azure Blob storage provider, ActiveMQ over STOMP with Oracle PL/SQL and dukascopy/handlersocket. Seopa and BestComp trimmed to what is defensible, Buylink added as part-time advisory work, the project set replaced with LevelUp / Eimtahan.az, Bakutrend, the MMMC Platform and pit, and meta keywords refreshed.",
       "dependencies": [
         "feat-005"
       ],
-      "status": "not-started",
-      "evidence": ""
+      "status": "done",
+      "evidence": "./init.sh exits 0; docs/index.html regenerated and committed with the sources; the generated page shows 2 project links (both https) and 0 hits for superseded stack terms."
     }
   ]
 }

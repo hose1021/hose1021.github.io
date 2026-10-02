@@ -50,6 +50,7 @@ function formatDuration(start, end) {
 }
 
 function period(start, end) {
+  if (start === end) return `<dd class="flex items-center gap-0.5 tabular-nums"><span>${h(start)}</span></dd>`;
   return `<dd class="flex items-center gap-0.5 tabular-nums"><span>${h(start)}</span><span class="font-mono">—</span><span>${h(end)}</span></dd>`;
 }
 
@@ -201,7 +202,7 @@ function projectItem(project) {
           <div class="mx-4 flex size-6 shrink-0 items-center justify-center select-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-5">${icon("code-xml", "size-5")}</div>
           <div class="flex flex-1 items-center gap-2 border-l border-dashed border-line p-4">
             <div class="flex-1">
-              <h3 class="mb-1 leading-snug font-medium text-balance">${h(project.name)}</h3>
+              <h3 class="mb-1 leading-snug font-medium text-balance">${project.url ? externalLink(project.url, project.name) : h(project.name)}</h3>
               <dl class="text-sm text-muted-foreground">
                 <dt class="sr-only">Period</dt>
                 ${period(project.startDate, project.endDate)}
@@ -355,7 +356,7 @@ const html = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="${h(data.basics.label)}. ${h(data.summary)}">
-  <meta name="keywords" content="resume,cv,${h(data.basics.name)},PHP,Laravel,Node.js,TypeScript,REST API,microservices,fintech">
+  <meta name="keywords" content="resume,cv,${h(data.basics.name)},PHP,Laravel,MySQL,PostgreSQL,Oracle,Redis,Docker,REST API,JSON-RPC,fintech">
   <meta name="author" content="${h(data.basics.name)}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">

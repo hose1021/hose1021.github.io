@@ -2,19 +2,22 @@
 
 ## Current Objective
 
-- Goal: overhaul the resume design and refresh its content, on a branch, keeping the existing build pipeline.
-- Current status: complete and verified in a browser; branch pushed and open for review.
-- Branch / commit: `redesign/resume-site` off `main` @ 973ff57.
+- Goal: keep the resume site's content aligned with the verified career record, on a branch, with the
+  existing build pipeline untouched.
+- Current status: content pass complete, regenerated and committed on the branch; `./init.sh` passes.
+- Branch / commit: `redesign/resume-site` off `main`.
 
 ## Completed This Session
 
-- [x] `tailwind.css`: oklch tokens, `dark` and `pointer-fine` variants, screen-line / stripe-divider utilities, typeset list
-- [x] `scripts/generate.js`: profile header, nine panels, footer, and the vanilla-JS behaviours
-- [x] `docs/fonts.css` + two faces: Inter (latin, latin-ext) and Geist Mono; every FiraGO and unused Geist file removed
-- [x] `data/icons.json`: 15-icon lucide subset, so the generator stays dependency-free
-- [x] Content refreshed from `Mikail_Huseynov_CV.pdf`, with a new Professional Development panel
-- [x] `init.sh` drift check no longer fails on uncommitted source changes
-- [x] Harness state files updated
+- [x] `data/resume.json` rewritten around the verified facts: Dukascopy rule engine / 145 endpoints /
+      JSON-RPC layer / PHP 8.2 migration / GDPR pipeline / S3 + Azure storage / ActiveMQ + Oracle /
+      `dukascopy/handlersocket`; Seopa and BestComp trimmed to what is defensible; Buylink added as
+      part-time advisory work.
+- [x] Project set replaced with LevelUp / Eimtahan.az, Bakutrend, the MMMC Platform and pit.
+- [x] `scripts/generate.js`: project titles link to `project.url` when present, `period()` prints one
+      month when start and end are equal, meta keywords refreshed.
+- [x] `docs/index.html` and `docs/build.css` regenerated and committed with the sources.
+- [x] Harness state files updated.
 
 ## Verification Evidence
 
@@ -26,27 +29,30 @@
 | Build determinism | `bun run build` twice | same md5 | after `source(none)`; before it, every rebuild grew the file by ~928 lines |
 | Theme toggle | click `#theme-toggle`, press `D` | light ⇄ dark | `localStorage.theme` updated, `color-scheme` follows |
 | Behaviours | browser probe | ok | 3 flip sentences, nav `aria-current` follows the scroll, 9 copy buttons |
-| Rendering | browser probe at 1440px | ok | 9 panels, 10 stripe dividers, column `[336, 768]`, header 56px sticky, footer `dl` gone (0 `dt`), 3 social links |
+| Rendering | browser probe at 1440px | ok | 9 panels, 10 stripe dividers, column `[336, 768]`, header 56px sticky, 3 social links |
 | Responsive | 390px viewport | ok | no horizontal overflow, nav collapses below `sm` |
+| Project links | generated page probe | ok | 2 project links, both `https://github.com/hose1021/...` |
+| Stale stack terms | grep generated page | 0 hits | superseded stack names no longer appear |
 
 ## Files Changed
 
-- `tailwind.css`, `scripts/generate.js`, `data/resume.json`, `data/icons.json` (new)
-- `docs/index.html`, `docs/build.css`, `docs/fonts.css`, `docs/fonts/Inter-latin.woff2`, `docs/fonts/Inter-latin-ext.woff2`, `docs/fonts/GeistMono-Variable.woff2`, `docs/.nojekyll`
-- `docs/fira-go.css`, 55 `docs/fonts/FiraGO-*.woff2`, `docs/fonts/original/`, `docs/fonts/Geist-Variable.woff2`, `docs/fonts/Caveat-Variable.woff2` — removed
-- `init.sh`, `AGENTS.md`, `feature_list.json`, `progress.md`, `session-handoff.md`
+- `data/resume.json`, `scripts/generate.js`, `progress.md`, `feature_list.json`, `session-handoff.md`
+- `docs/index.html`, `docs/build.css` - regenerated
 
 ## Decisions Made
 
-- Visual language: oklch zinc tokens, two border tokens (`border` for panels, `line` for dividers), full-bleed screen lines, stripe dividers, counted panel titles, icon tiles, rounded-full mono tags, numbered stack rows.
-- Web-first page; the A4 print layout and its two-page constraint are gone.
-- Removed on request: the decorative mark block, the handwritten greeting and note, the `Fig. 1.` caption, the local clock, the Highlights panel, the avatar roundel and the footer info rows.
+- The page carries no claim that is not in the CV; content edits happen in `data/resume.json` only.
+- Content truth beats keyword coverage: a stack name appears only where the work behind it exists.
+- A project links out only when a public URL exists; LevelUp and pit deliberately show no link.
+- Telegram stays in `basics.urls`; `siteFooter()` reads it from there.
 
 ## Blockers / Risks
 
-- `taglines` in `data/resume.json` are restatements of the summary; review the wording.
-- The sticky nav header was kept. It carries the navigation and the theme toggle; drop it too if that was the intent.
-- Attribution: the CSS utilities and token names in `tailwind.css` derive from an MIT-licensed design system. MIT asks that the upstream copyright notice travel with substantial copies, and no `NOTICE` file exists — a deliberate choice, revisit it if this repository is ever redistributed.
+- `taglines` restate the summary; the wording may still be tightened.
+- Attribution: the CSS utilities and token names in `tailwind.css` derive from an MIT-licensed design
+  system. MIT asks that the upstream copyright notice travel with substantial copies, and no `NOTICE`
+  file exists - a deliberate choice, revisit it if this repository is ever redistributed.
+- Three content questions belong to the user: Seopa detail, the Dukascopy end date, and the MSU degree.
 
 ## Next Session Startup
 
@@ -57,4 +63,5 @@
 
 ## Recommended Next Step
 
-- View the branch with `bun run serve`, then merge once the review passes. Pages publishes on the push to `main`.
+- View the branch with `bun run serve`, then merge to `main` once the review passes. Pages publishes on
+  the push to `main`.

@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Mikail Huseynov",
-    "label": "Senior Backend Engineer (PHP, Node.js)",
+    "label": "Senior Backend Engineer (PHP / Laravel)",
     "initials": [
       "M",
       "H"
@@ -25,17 +25,18 @@
     ]
   },
   "taglines": [
-    "8+ years building high-load fintech and SaaS platforms.",
-    "20+ REST APIs delivered for workflow and payments.",
-    "Critical API response times cut by 3x."
+    "8+ years building fintech and SaaS platforms.",
+    "Owned the workflow platform behind Dukascopy Bank's account, transfer and payment operations.",
+    "PHP 8.2, Laravel 10-12, Oracle PL/SQL and a from-scratch MySQL HandlerSocket client."
   ],
-  "summary": "Senior Backend Engineer with 8+ years of experience building high-load fintech and SaaS platforms. Specialized in PHP/Laravel and Node.js microservices, secure payment systems (PCI DSS), and AWS/Kubernetes infrastructure. Delivered core banking APIs at Dukascopy Bank, cutting critical response times by 3x and owning on-call production support for payment processing; engineered quote aggregation at Seopa processing 10+ external providers in under 500ms. Mentored junior engineers and led code reviews. Currently expanding into Go and AI-assisted engineering.",
+  "summary": "Senior Backend Engineer with 8+ years in fintech and SaaS, specializing in PHP/Laravel, MySQL/PostgreSQL and Docker. At Dukascopy Bank built and owned the rule engine, 145 HTTP endpoints and the storage migration behind its account, transfer, crypto and payment operations; since January 2026 building independent products in TypeScript and Rust. Open to remote roles in EU, UK and US time zones (GMT+4).",
   "professionalDevelopment": {
     "startDate": "Jan 2026",
     "endDate": "Present",
     "highlights": [
-      "Deepening AI-assisted engineering: LLM APIs, RAG, MCP, AI-driven development workflows.",
-      "Expanding backend stack beyond PHP into Node.js and Go (TypeScript, Go)."
+      "Building independent products: Bakutrend, a Rust news aggregator polling 25 sources (MIT licensed), and the MMMC Platform, a multi-tenant building-management system on Next.js and PostgreSQL.",
+      "Deepening AI-assisted engineering: LLM APIs, RAG, MCP and the pit issue-to-draft-PR orchestrator for coding agents.",
+      "Expanding beyond PHP into Rust and Go."
     ]
   },
   "experience": [
@@ -46,24 +47,52 @@
       "position": "Senior Software Engineer",
       "startDate": "Aug 2023",
       "endDate": "Jan 2026",
-      "description": "Swiss online bank providing trading services and banking solutions.",
+      "description": "Swiss online bank providing trading and banking solutions.",
       "highlights": [
-        "Optimized critical payment and workflow APIs (PCI DSS-compliant), reducing average response time by over 3x (from 7s to 2s) by refactoring business logic and database queries.",
-        "Engineered and implemented a high-performance data access layer using HandlerSocket for MySQL, bypassing the SQL parser for performance-critical workloads in the core banking system.",
-        "Architected and delivered over 20 new REST APIs and backend services for Workflow and Payments platforms using PHP and Laravel.",
-        "Built and deployed asynchronous task processing using message queues, decoupling services and improving resilience for payment processing.",
-        "Owned the full lifecycle of key microservices — architecture, implementation, deployment, monitoring, and on-call production support — in Kubernetes and AWS.",
-        "Mentored junior engineers and led code reviews, raising engineering standards across the payments team."
+        "Owned the account, transfer, crypto and payment paths on the bank's workflow platform: 213 Jira tickets delivered, junior engineers mentored and pull requests reviewed.",
+        "Built and maintained 145 HTTP endpoints (63 API, 81 web) and the 96-method JSON-RPC layer behind them, owning the main controller (65 methods) and creating the endpoint scaffolding generator the API team uses for controller and DTO stubs with OpenAPI specs.",
+        "Owned the rule engine that validates every workflow: 103 rule classes and 18 validators, including the account-balance rule and the account-closure active-workflow guard, both authored from scratch.",
+        "Drove the PHP 8.2 migration (924-file change set) and the Laravel upgrade, owning dependency hygiene across 43 composer.json changes.",
+        "Built the GDPR pipeline that erases customer personal data, and as sole author of the S3 and Azure Blob file-storage provider migrated account attachments from local storage to AWS S3 and then Azure Blob.",
+        "Integrated ActiveMQ over STOMP messaging and worked against Oracle PL/SQL banking packages through 35 repository wrappers.",
+        "Created dukascopy/handlersocket from scratch - the company's PHP client library for the MySQL HandlerSocket NoSQL plugin (first-listed composer author) - with two drivers, index abstraction, a Docker test harness and a PHPStan level 8 CI gate."
       ],
       "stack": [
-        "PHP",
+        "PHP 8.2",
         "Laravel",
+        "JSON-RPC",
         "MySQL",
         "HandlerSocket",
-        "Message Queues",
-        "Kubernetes",
-        "AWS",
-        "PCI DSS"
+        "Oracle PL/SQL",
+        "ActiveMQ (STOMP)",
+        "Redis",
+        "Docker",
+        "Jenkins",
+        "AWS S3",
+        "Azure Blob",
+        "HashiCorp Vault"
+      ]
+    },
+    {
+      "company": "Buylink",
+      "location": "Remote",
+      "url": null,
+      "position": "Technical Advisor (part-time)",
+      "startDate": "Jun 2024",
+      "endDate": "Sep 2024",
+      "description": "Part-time advisory alongside Dukascopy for a partner and payments platform.",
+      "highlights": [
+        "Led the PostgreSQL to MySQL migration of the platform's core data.",
+        "Owned the Docker development and production environments, two CI deployment workflows and release management from 1.3.4 to 1.4.3.",
+        "Hardened transaction handling and partner-balance logic, and reviewed the team's pull requests."
+      ],
+      "stack": [
+        "Laravel 10",
+        "Nova 4",
+        "Octane",
+        "PostgreSQL",
+        "MySQL",
+        "Docker"
       ]
     },
     {
@@ -73,22 +102,15 @@
       "position": "Senior Software Engineer",
       "startDate": "Jan 2021",
       "endDate": "Mar 2023",
-      "description": "Parent company of UK financial comparison platforms Quotezone.co.uk and CompareNI.com.",
+      "description": "Parent company of the UK financial comparison platforms Quotezone.co.uk and CompareNI.com.",
       "highlights": [
-        "Led development of an insurance quote aggregation service using Node.js and TypeScript, processing requests from 10+ external providers in under 500ms.",
-        "Migrated a monolithic PHP component to a standalone microservice, reducing deployment dependencies and improving team autonomy.",
-        "Optimized MongoDB queries for the user profile service, cutting read latency by 40% and supporting a 2x increase in traffic.",
-        "Built and maintained GitLab CI pipelines for automated testing and Kubernetes deployment, reducing manual deployment time by 80%.",
+        "Migrated a monolithic PHP component into a standalone microservice, reducing deployment dependencies and improving team autonomy.",
         "Designed and implemented REST APIs for a React-based customer dashboard in collaboration with the frontend team."
       ],
       "stack": [
         "PHP",
-        "Node.js",
-        "TypeScript",
-        "MongoDB",
-        "React",
-        "GitLab CI",
-        "Kubernetes"
+        "REST API",
+        "React"
       ]
     },
     {
@@ -100,8 +122,7 @@
       "endDate": "Dec 2020",
       "description": "Leading IT solutions provider and system integrator in Azerbaijan.",
       "highlights": [
-        "Built a PHP/Laravel REST API for an internal workflow automation tool, eliminating ~10 hours of manual data entry per week for the operations team.",
-        "Refactored a legacy data import module, improving stability and reducing processing errors by 50%.",
+        "Refactored a legacy data import module, improving stability and reducing processing errors.",
         "Standardized engineering onboarding by containerizing the local development environment with Docker, reducing setup time from a full day to under an hour."
       ],
       "stack": [
@@ -119,89 +140,107 @@
       "startDate": "Feb 2017",
       "endDate": "Mar 2018",
       "highlights": [
-        "Developed and maintained client web applications using PHP/Laravel, including REST APIs and third-party service integrations.",
-        "Managed delivery across requirements, testing, deployment, and maintenance in a Dockerized environment."
+        "Developed and maintained client web applications using PHP/Laravel, including REST APIs and third-party service integrations."
       ],
       "stack": [
         "PHP",
         "Laravel",
-        "REST API",
-        "Docker"
+        "REST API"
       ]
     }
   ],
   "projects": [
     {
-      "name": "EImtahan.az · Personal Project",
+      "name": "LevelUp / Eimtahan.az",
       "url": null,
-      "startDate": "Jun 2024",
-      "endDate": "Nov 2024",
+      "startDate": "Dec 2024",
+      "endDate": "Dec 2025",
       "highlights": [
-        "Architected a scalable SaaS exam platform (PHP/Laravel, Next.js/React) supporting concurrent sessions with real-time reporting.",
-        "Integrated LLM APIs for AI-powered question generation, automating content creation for educators."
+        "Built the front end of an exam and school-management SaaS in Next.js 16, React 19, TypeScript, TanStack Query, Zustand and Tailwind.",
+        "Implemented exam authoring and live exam monitoring, the multilingual content model and the production Docker image and CI pipeline."
       ],
       "stack": [
-        "PHP",
-        "Laravel",
-        "Next.js",
-        "React",
-        "LLM APIs"
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "TanStack Query",
+        "Zustand",
+        "Tailwind CSS",
+        "Docker"
       ]
     },
     {
-      "name": "hire.az · Personal Project",
-      "url": null,
-      "startDate": "May 2019",
-      "endDate": "Jun 2022",
+      "name": "Bakutrend",
+      "url": "https://github.com/hose1021/bakutrend",
+      "startDate": "Sep 2026",
+      "endDate": "Sep 2026",
       "highlights": [
-        "Privacy-focused recruitment platform (PHP/Laravel, Next.js) with anonymous profiles; CI/CD on Vercel and Docker, Sentry observability."
+        "Aggregates 25 news sources (RSS and Telegram) on a five-minute poll, clusters duplicate events and scores prominence from independent coverage, views per hour, age decay and spread.",
+        "Offline end-to-end pipeline test with an injected clock; clippy-clean; MIT licensed."
       ],
       "stack": [
-        "PHP",
-        "Laravel",
-        "Next.js",
-        "Sentry",
-        "Vercel",
-        "Docker"
+        "Rust",
+        "tokio",
+        "axum",
+        "ratatui",
+        "SQLite"
+      ]
+    },
+    {
+      "name": "MMMC Platform",
+      "url": "https://github.com/hose1021/home",
+      "startDate": "Jun 2026",
+      "endDate": "Sep 2026",
+      "highlights": [
+        "Multi-tenant apartment-building management: owners, charges and debt, meetings with voting, tickets and an audit trail.",
+        "Built on Next.js 16, PostgreSQL and Drizzle with 8 Vitest suites and Playwright end-to-end tests.",
+        "Enforced a lint rule banning database-client imports in server-action files, then migrated every write into audited transactional services."
+      ],
+      "stack": [
+        "Next.js 16",
+        "PostgreSQL",
+        "Drizzle",
+        "Vitest",
+        "Playwright"
+      ]
+    },
+    {
+      "name": "pit",
+      "url": null,
+      "startDate": "Aug 2026",
+      "endDate": "Aug 2026",
+      "highlights": [
+        "Issue-to-draft-PR orchestrator that drives a coding agent: allowlist and consent checks, push preflight, retries, timeouts and an SSE cockpit.",
+        "Node 24 and Ink/React, with an offline test suite."
+      ],
+      "stack": [
+        "Node.js",
+        "TypeScript",
+        "Ink",
+        "React"
       ]
     }
   ],
   "skillGroups": [
     {
       "name": "Languages",
-      "items": "PHP 8.x, JavaScript (ES6+), TypeScript, Go (in progress), SQL, Bash/Shell"
+      "items": "PHP 7.x / 8.2, TypeScript, JavaScript, SQL, Rust, Go (in progress), Bash"
     },
     {
       "name": "Backend & APIs",
-      "items": "Laravel, Node.js, REST API, Microservices, CQRS, Event-Driven Architecture, WebSockets, JWT, PCI DSS, Payment Gateways"
+      "items": "Laravel 10-12, Eloquent, Queues and Jobs, REST API, JSON-RPC, JWT, OIDC/OAuth, PHPUnit, PHPStan level 8"
     },
     {
       "name": "Databases & Messaging",
-      "items": "MySQL, PostgreSQL, MongoDB, Redis, HandlerSocket, Kafka, RabbitMQ"
+      "items": "MySQL, PostgreSQL, Oracle (PL/SQL), Redis, ActiveMQ (STOMP), HandlerSocket"
     },
     {
-      "name": "Architecture & Performance",
-      "items": "High-Load Systems, Distributed Systems, System Design, SOLID, Performance Optimization, Caching"
+      "name": "Infrastructure",
+      "items": "Docker, Docker Compose, Jenkins, GitHub Actions, Nginx, Linux, HashiCorp Vault, AWS S3, Azure Blob"
     },
     {
-      "name": "Infrastructure & Cloud",
-      "items": "Docker, Kubernetes, Nginx, AWS, Terraform, GitHub Actions, GitLab CI/CD"
-    },
-    {
-      "name": "Frontend",
-      "items": "React, Next.js, Vue.js, Nuxt.js, Angular, Tailwind CSS"
-    },
-    {
-      "name": "Testing & Quality",
-      "items": "PHPUnit, PHPStan, Unit Testing, Integration Testing, Swagger/OpenAPI"
-    },
-    {
-      "name": "Observability",
-      "items": "Sentry, Logging, Monitoring"
-    },
-    {
-      "name": "AI-Assisted Engineering",
-      "items": "OpenAI Codex, Claude, MCP, RAG, Prompt & Context Engineering, AI-Assisted Code Review"
+      "name": "Frontend & Tooling",
+      "items": "Next.js, React, Tailwind CSS, TanStack Query, Zustand, Vitest, Playwright, LLM APIs, RAG, MCP"
     }
   ],
   "education": [
@@ -229,7 +268,7 @@
     },
     {
       "language": "English",
-      "level": "Professional Working Proficiency (B2)"
+      "level": "Professional Working Proficiency"
     },
     {
       "language": "Turkish",
