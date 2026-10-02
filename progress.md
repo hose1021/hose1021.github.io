@@ -19,8 +19,6 @@
     workflow rule engine (103 rule classes, 18 validators), the 145 HTTP endpoints (63 API, 81 web)
     and the 96-method JSON-RPC layer, the PHP 8.2 migration, the GDPR erasure pipeline, the S3 and
     Azure Blob storage provider, ActiveMQ over STOMP with Oracle PL/SQL, and `dukascopy/handlersocket`.
-  - Buylink appears as part-time advisory work with the three things actually done (PostgreSQL to
-    MySQL migration, Docker and CI environments, releases 1.3.4 to 1.4.3).
   - The project set is now LevelUp / Eimtahan.az, Bakutrend, the MMMC Platform and pit.
   - Two projects link to their public repository; the two without a public URL show no link.
   - Hard-coded meta keywords refreshed to the stack actually claimed.

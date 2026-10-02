@@ -11,8 +11,7 @@
 
 - [x] `data/resume.json` rewritten around the verified facts: Dukascopy rule engine / 145 endpoints /
       JSON-RPC layer / PHP 8.2 migration / GDPR pipeline / S3 + Azure storage / ActiveMQ + Oracle /
-      `dukascopy/handlersocket`; Seopa and BestComp trimmed to what is defensible; Buylink added as
-      part-time advisory work.
+      `dukascopy/handlersocket`; Seopa and BestComp trimmed to what is defensible.
 - [x] Project set replaced with LevelUp / Eimtahan.az, Bakutrend, the MMMC Platform and pit.
 - [x] `scripts/generate.js`: project titles link to `project.url` when present, `period()` prints one
       month when start and end are equal, meta keywords refreshed.
